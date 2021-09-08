@@ -1,0 +1,26 @@
+#header{
+  color:  fuchsia;
+  font-size:  32px;
+  font-family:  fantasy, sans-serif;
+  text-shadow: 2px 2px deeppink;
+}
+
+#header:hover{
+  color: palegoldenrod;
+}
+
+#header-small {
+  font-size:  16px;
+  color:  darksalmon;
+  text-shadow:  1px deeppink;
+  transition: transform .3s;
+}
+
+#header-small:hover {
+
+  transform: translateY(-10px);
+}
+
+* {
+  background-color:  palegoldenrod;
+}
