@@ -1,8 +1,8 @@
 #header{
-  color:  fuchsia;
+  color:  steelblue;
   font-size:  32px;
   font-family:  fantasy, sans-serif;
-  text-shadow: 2px 2px deeppink;
+  text-shadow: 2px 2px fuchsia;
 }
 
 #header:hover{
@@ -11,16 +11,24 @@
 
 #header-small {
   font-size:  16px;
-  color:  darksalmon;
-  text-shadow:  1px deeppink;
+  color:  peru;
+  text-shadow:  1px darkmagenta;
   transition: transform .3s;
 }
 
 #header-small:hover {
-
   transform: translateY(-10px);
 }
 
+.item-img {
+  width: 225px;
+  padding: 0 10px;
+  float: left;
+  height: 225px;
+  background-repeat: no-repeat;
+  background-size: 225px;
+}
+
 * {
-  background-color:  palegoldenrod;
+  background-color:  papayawhip;
 }
