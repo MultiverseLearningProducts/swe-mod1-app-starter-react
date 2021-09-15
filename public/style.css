@@ -1,34 +1,201 @@
-#header{
-  color:  steelblue;
-  font-size:  32px;
-  font-family:  fantasy, sans-serif;
-  text-shadow: 2px 2px fuchsia;
+body {
+  background-color: #C2C2C2;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0px 0;
+  border: 0px solid #ffffff;
+  text-align: center;
+}
+.container {
+display:  flex;
+flex-direction:  column;
+min-height:  100vh;
 }
 
-#header:hover{
-  color: palegoldenrod;
+
+.header {
+display:  flex;
+flex-direction: row;
+  width:  100vw;
+  height: 15vh; 
+padding:  15px;
+background-color: cornsilk;
+color:  cornflowerblue;
 }
 
-#header-small {
-  font-size:  16px;
-  color:  peru;
-  text-shadow:  1px darkmagenta;
-  transition: transform .3s;
+.header-info {
+  width: 30%;
+  height: 10vh;
+
 }
 
-#header-small:hover {
-  transform: translateY(-10px);
+
+.header-container{
+display: flex;
+flex-direction: column;
+
+
+}
+#logo{
+  background-color: cornsilk;
+  height: 90% ;
+  padding: 0%;
+  margin: 0%;
+
 }
 
-.item-img {
-  width: 225px;
-  padding: 0 10px;
-  float: left;
-  height: 225px;
-  background-repeat: no-repeat;
-  background-size: 225px;
+#logo-tag{
+  margin:0%;
+  padding:0%;
+
+}
+.teacher-connect{
+text-align:center; 
 }
 
-* {
-  background-color:  papayawhip;
+.main-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+
 }
+
+.avatar-image{
+height: 35vh;
+}
+
+
+/* View students page */
+.icon-avatar2{
+  height: 180%;
+  padding-right: 30px;
+}
+
+.table{
+text-align: center;
+}
+
+select{
+width: 150px;
+height:150px;
+margin: 10px;
+}
+
+
+.header-nav {
+width:  70%;
+  display:  flex;
+  height: 10vh;
+}
+
+.nav-item {
+width:  50%;
+margin-top: 10vh;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dropdown{
+
+  flex-direction: column;
+  align-self: center;
+  
+}
+
+.table-container{
+display: flex;
+
+
+}
+
+.table{
+flex-direction: row;
+  align-self: center;
+  justify-content: space-around;
+
+
+}
+
+/* Enroll students page styling  */
+
+.table-container{
+text-align: center;
+}
+
+select{
+width: 150px;
+height:150px;
+margin: 10px;
+}
+
+/* Media queries for the home page */
+
+@media (max-width:  550px) {
+.header-container{
+  width: calc(100% - 20px);
+  height: calc(10% - 15px);
+}
+}
+
+/* Media queries for theView student page */
+
+@media (max-width:  550px) {
+.header-nav{
+  width: calc(90% - 20px);
+  height: calc(10% - 15px);
+
+
+
+}
+#logo{
+  display:none;
+
+}
+#logo-tag h1{
+  /* width: calc(10% - 20px); */
+  font-size: 0.75 rem;
+  }
+/* .header-nav {
+  width:  70%;
+  display:  flex;
+  height: 10vh;
+}
+
+.nav-item {
+  width:  50%;
+  margin-top: 10vh;
+} */
+
+}
+
+
+
+/* @media (max-width: 1100px){
+.main-gallery-img{
+  width: calc(33% - 20px);
+}
+}
+
+@media (max-width: 850px) {
+.main-gallery-img{
+  width: calc(50% - 20px);
+}
+}
+
+@media (max-width:  550px) {
+.main-gallery-img{
+  width: calc(100% - 20px);
+}
+
+.header {
+  position:  fixed;
+  top:  0;
+  left:  0;
+  opacity: 0.6;
+}
+
+} */
