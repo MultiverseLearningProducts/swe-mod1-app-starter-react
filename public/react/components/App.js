@@ -3,7 +3,7 @@ import { ItemContainer } from './ItemContainer';
 
 export const App = () => {
 
-	const [sauces, setSauces] = useState([])
+	const [plants, setPlants] = useState([])
 	const [message, setMessage] = useState('🔥')
 
 
@@ -12,24 +12,25 @@ export const App = () => {
 		setMessage(updatedMessage)
 	}
 
-	async function fetchSauces(){
+	async function fetchPlants(){
 		try {
-			const response = await fetch('http://localhost:3000/sauces');
+			const response = await fetch('http://localhost:3000/plants');
 			const responseJSON = await response.json();
-			setSauces(responseJSON)
+			setPlants(responseJSON)
+			
 		} catch (err) {
 			console.log("Oh no an error! ", err)
 		}
 	}
 
 	useEffect(() => {
-		fetchSauces()
+		fetchPlants()
 	}, []);
 
 	return (
 		<div onClick={handleClick}>	
 			<h2 id="header-small">A Somewhat { message } Site</h2>
-			<ItemContainer items={sauces} />
+			<ItemContainer items={plants} />
 		</div>
 	)
 }

@@ -32,3 +32,26 @@
 * {
   background-color:  papayawhip;
 }
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid red;
+  width: 50%;
+  height: 500px;
+
+}
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
+
+}
+.card-item {
+  display:flex;
+  flex-flow: l
+
+}
+
