@@ -41,7 +41,7 @@ flex-direction: column;
   height: 90% ;
   padding: 0%;
   margin: 0%;
-
+  float: left;
 }
 
 #logo-tag{
