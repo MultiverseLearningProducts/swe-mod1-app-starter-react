@@ -1,7 +1,7 @@
 <div className="container">
 			<header class="header">
 				<div class="header-info">
-                <img style="float:left;"id="logo" src="../resources/images/illo127.svg"/>					<h1 id="logo-tag">MHAC</h1>
+                <img  id="logo" src="../resources/images/illo127.svg"/>					<h1 id="logo-tag">MHAC</h1>
 				</div>
 				<nav class="header-nav">
 					<h3 class="nav-item">
@@ -35,48 +35,51 @@
 
                                     <a href="#"><br/>
                                             <img src="https://images.mypandit.com/myPandit_web/images/blog/5_Planets_Stellelium.jpg" width="20" height="15"/>ALL</a> 
-                                </div>                                </form>
+                                </div>
+							</form>
                     
                     </div>
                     <div class="table-container">
-                    <table class="table">
-                            <tr>
-                              <th>First Name</th>
-                              <th>Last Name</th>
-                              <th>Location</th>
-                              <th>Actions</th>
-                            </tr>
-                            <tr>
-                              <td>Alfreds </td>
-                              <td>Maria </td>
-                              <td>Saturn</td>
-                              <td><a href="">Unenroll</a>
-                              </td>
-                            </tr>
-                            <tr>
-                                <td>Alfreds </td>
-                                <td>Maria </td>
-                                <td>Saturn</td>
-                                <td><a href="">Unenroll</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Alfreds </td>
-                                <td>Maria </td>
-                                <td>Saturn</td>
-                                <td><a href="">Unenroll</a>
-                                </td>
-                            </tr> 
-                            <tr>
-                                <td>Alfreds </td>
-                                <td>Maria </td>
-                                <td>Saturn</td>
-                                <td><a href="">Unenroll</a>
-                                </td>
-                            </tr>
-                          </table>
-
-                        
+                    	<table class="table">
+                        	<thead>
+								<tr>
+                              		<th>First Name</th>
+                              		<th>Last Name</th>
+                              		<th>Location</th>
+                              		<th>Actions</th>
+                            	</tr>
+							</thead>
+                        	<tbody>
+								<tr>
+                              		<td>Alfreds </td>
+                              		<td>Maria </td>
+                              		<td>Saturn</td>
+                              		<td><a href="">Unenroll</a>
+                              		</td>
+                            	</tr>
+                            	<tr>
+                                	<td>Alfreds </td>
+									<td>Maria </td>
+									<td>Saturn</td>
+									<td><a href="">Unenroll</a>
+									</td>
+                            	</tr>
+                            	<tr>
+									<td>Alfreds </td>
+									<td>Maria </td>
+									<td>Saturn</td>
+									<td><a href="">Unenroll</a>
+									</td>
+                            	</tr> 
+                            	<tr>
+									<td>Alfreds </td>
+									<td>Maria </td>
+									<td>Saturn</td>
+									<td><a href="">Unenroll</a>
+									</td>
+                            	</tr>
+							</tbody>
+                    	</table>    
                 	</div>
 				</main>
 				<footer class="footer">
