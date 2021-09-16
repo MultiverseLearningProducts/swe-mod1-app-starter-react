@@ -105,3 +105,6 @@ dist
 
 #sqlite
 *.sqlite
+
+#other
+package-lock.json
