@@ -60,9 +60,10 @@ align-items: center;
 
 }
 
-.avatar-image{
-height: 35vh;
+.icon-avatar{
+  width: 50%;
 }
+
 
 
 /* View students page */
