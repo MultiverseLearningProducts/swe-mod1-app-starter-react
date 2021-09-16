@@ -77,6 +77,11 @@ height: 35vh;
   align-items: center;
 }
 
+table, th, td {
+  border: 1px solid black;
+}
+
+
 select{
 width: 150px;
 height:150px;
@@ -127,6 +132,8 @@ flex-direction: column;
 
 /* Enroll students page styling  */
 
+tr:hover {
+  background-color: #D6EEEE;
 }
 
 select{
