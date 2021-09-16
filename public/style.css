@@ -70,11 +70,24 @@ body {
   margin-right: auto;
 }
 
-.card-name {
+.card-name,
+.card-price {
   text-align: center;
 }
 
 /* END CARDS ------------------------------------------------------------------------- */
+
+/* START CART ------------------------------------------------------------------------- */
+
+.cart-container {
+  display: flex;
+  width: 100vw;
+  border: 1px solid pink;
+  padding: 15px;
+  flex-direction: column;
+}
+
+/* END CART ------------------------------------------------------------------------- */
 
 /* START FOOTER -------------------------------------------------------- */
 

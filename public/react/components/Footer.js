@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer class="footer">
-      <div class="footer-left">
-        <div class="footer-item">
+    <footer className="footer">
+      <div className="footer-left">
+        <div className="footer-item">
           <h3>FOLLOW US</h3>
           <ul>
             <li>
@@ -19,8 +19,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div class="footer-center">
-        <div class="footer-item">
+      <div className="footer-center">
+        <div className="footer-item">
           <h3>ABOUT</h3>
           <ul>
             <li>
@@ -40,7 +40,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <h3>SUPPORT</h3>
           <ul>
             <li>
@@ -60,7 +60,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div class="footer-item">
+        <div className="footer-item">
           <h3>SHIPPING</h3>
           <ul>
             <li>
@@ -81,8 +81,8 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div class="footer-right">
-        <div class="footer-item">
+      <div className="footer-right">
+        <div className="footer-item">
           <h3>SUBSCRIBE</h3>
         </div>
       </div>
