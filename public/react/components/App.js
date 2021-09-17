@@ -6,8 +6,11 @@ import { EnrollStudent } from './EnrollStudent';
 
 export const App = () => {
 
-	const [user, setUser] = useState("")
-	const [student, setStudents] = useState(["Abdi", "Sharon", "Elizabeth", "James"])
+	// const [user, setUser] = useState("")
+	// const [student, setStudents] = useState(["Abdi", "Sharon", "Elizabeth", "James"])
+
+	const [sauces, setSauces] = useState([])
+	const campusList = useState(['All','Mars', 'Moon', 'Saturn'])
 
 
 	// function handleClick(e) {
@@ -15,24 +18,24 @@ export const App = () => {
 	// 	setMessage(updatedMessage)
 	// }
 
-	// async function fetchSauces(){
-	// 	try {
-	// 		const response = await fetch('http://localhost:3000/sauces');
-	// 		const responseJSON = await response.json();
-	// 		setSauces(responseJSON)
-	// 	} catch (err) {
-	// 		console.log("Oh no an error! ", err)
-	// 	}
-	// }
+	async function fetchSauces(){
+		try {
+			const response = await fetch('http://localhost:3000/sauces');
+			const responseJSON = await response.json();
+			setSauces(responseJSON)
+		} catch (err) {
+			console.log("Oh no an error! ", err)
+		}
+	}
 
-	// useEffect(() => {
-	// 	fetchSauces()
-	// }, []);
+	useEffect(() => {
+		fetchSauces()
+	}, []);
 
 	return (
 		<div>
-			<LoginContainer />
-			{/* <ViewStudentContainer /> */}
+			{/* <LoginContainer /> */}
+			<ViewStudentContainer items={sauces} campuses={campusList} />
 			{/* <EnrollStudent /> */}
 			
 		</div>

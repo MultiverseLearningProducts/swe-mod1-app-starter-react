@@ -83,11 +83,7 @@ table, th, td {
 }
 
 
-select{
-width: 150px;
-height:150px;
-margin: 10px;
-}
+
 
 
 .header-nav {
@@ -107,12 +103,7 @@ margin-top: 10vh;
 
 }
 
-.dropdown{
 
-  flex-direction: column;
-  align-self: center;
-  
-}
 
 .table-container{
   flex-direction:row;
@@ -137,11 +128,7 @@ tr:hover {
   background-color: #D6EEEE;
 }
 
-select{
-width: 150px;
-height:150px;
-margin: 10px;
-}
+
 
 /* Media queries for the home page */
 
