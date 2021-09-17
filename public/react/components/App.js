@@ -3,6 +3,7 @@ import { ItemContainer } from "./ItemContainer";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cart from "./Cart";
+import { Route, Switch } from "react-router-dom";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -43,16 +44,15 @@ export const App = () => {
       const responseJSON = await response.json();
       let tempPlant=[];
       let tempCoffee=[];
-      responseJSON.map(item=>{
-        if (item.type=="plant") {
-        tempPlant=[...tempPlant,item];
+      for( let i = 0; i < responseJSON.length(); i++){
+          if (item.type=="plant") {
+            tempPlant=[...tempPlant,item];
+            }
+          else if (item.type=="coffee") {
+            tempCoffee=[...tempCoffee,item]    
         }
-      else if (item.type=="coffee") {
-        tempCoffee=[...tempCoffee,item]
-        
-        }
-      })
-    
+      }
+          
      setPlants(tempPlant);
      setCoffees(tempCoffee);
     } catch (err) {
@@ -67,9 +67,15 @@ export const App = () => {
   return (
     <div className="App">
       <Navbar></Navbar>
+        <Switch>
+            <Route path="/plants">
+              <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
+            </Route>
+            <Route path="/coffees">
+              <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
+            </Route>
+        </Switch>
       <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
-      <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
-      <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
       <Footer></Footer>
     </div>
   );

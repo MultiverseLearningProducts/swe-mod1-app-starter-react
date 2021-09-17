@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
         <h2 className="nav-item">
-          <a href="#">Plants</a>
+          <Link to="/plants">Plants</Link>
         </h2>
         <h2 className="nav-item">
-          <a href="#">Coffee</a>
+        <Link to="/coffees">Coffee</Link>
         </h2>
       </div>
       <div className="navbar-center">
