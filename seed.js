@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs').promises;
 
 const {sequelize} = require('./db');
-const {Plant} = require('./models');
+const {Plant,Coffee} = require('./models');
 
 
 const seed = async () => {

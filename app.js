@@ -32,6 +32,15 @@ app.get('/plants/:id', async (req, res) => {
     const plant = await Plant.findByPk(req.params.id)
     res.json({plant})
 })
+app.get('/coffees', async (req, res) => {
+    const coffees= await Coffee.findAll()
+    res.json(coffees)
+})
+
+app.get('/coffees/:id', async (req, res) => {
+    const coffee = await Coffee.findByPk(req.params.id)
+    res.json({coffee})
+})
 
 app.listen(PORT, () => {
     sequelize.sync({force: true});

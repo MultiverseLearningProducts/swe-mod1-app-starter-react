@@ -10,6 +10,7 @@ export const ItemContainer = (props) => {
 			props.items.map((item, idx) => {
 				return <Item onAdd={onAdd} item={item} key={idx} />;
 			})
+			
 		}
 		</div>
 	)

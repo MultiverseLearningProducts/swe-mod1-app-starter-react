@@ -9,6 +9,8 @@ export const Item = (props) => {
       <h3 className="card-name">{props.item.name} </h3>
       <h3 className="card-price">$ {props.item.price}</h3>
       <button onClick={() => onAdd(props.item)}>Add To Cart</button>
+      <button onClick={() => onView(props.item)}>View Details</button>
+      
     </div>
   );
 };
