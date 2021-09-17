@@ -8,8 +8,8 @@ export const ItemContainer = (props) => {
 	return (
 		<div className="item-container">
 		{
-			props.items.map((item, idx) => {
-				return <Item onAdd={onAdd} item={item} key={idx} />;
+			props.items.map((item) => {
+				return <Item onAdd={onAdd} item={item} key={item.id} />;
 			
 			})
 

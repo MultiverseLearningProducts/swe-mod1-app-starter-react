@@ -1,9 +1,10 @@
 const { Sequelize, DataTypes, Model } = require("sequelize");
 const { sequelize } = require("../db");
 
-class Plant extends Model {}
+class Product extends Model {}
 
-Plant.init(
+Product.init(
+
   {
     name: DataTypes.STRING,
     image: DataTypes.STRING,
@@ -17,4 +18,4 @@ Plant.init(
   }
 );
 
-module.exports = { Plant };
+module.exports = { Product };

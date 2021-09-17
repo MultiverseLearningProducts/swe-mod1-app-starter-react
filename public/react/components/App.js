@@ -5,8 +5,10 @@ import Footer from "./Footer";
 import Cart from "./Cart";
 
 export const App = () => {
-  const [plants, setPlants] = useState([]);
+  const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
+  const [plants,setPlants]=useState([]);
+  const [coffees,setCoffees]=useState([]);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -35,25 +37,39 @@ export const App = () => {
     }
   };
 
-  async function fetchPlants() {
+  async function fetchProducts() {
     try {
-      const response = await fetch("http://localhost:3000/plants");
+      const response = await fetch("http://localhost:3000/products");
       const responseJSON = await response.json();
-      setPlants(responseJSON);
+      let tempPlant=[];
+      let tempCoffee=[];
+      responseJSON.map(item=>{
+        if (item.type=="plant") {
+        tempPlant=[...tempPlant,item];
+        }
+      else if (item.type=="coffee") {
+        tempCoffee=[...tempCoffee,item]
+        
+        }
+      })
+    
+     setPlants(tempPlant);
+     setCoffees(tempCoffee);
     } catch (err) {
       console.log("Oh no an error! ", err);
     }
   }
 
   useEffect(() => {
-    fetchPlants();
+    fetchProducts();
   }, []);
 
   return (
     <div className="App">
       <Navbar></Navbar>
       <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
-      <ItemContainer onAdd={onAdd} items={plants}></ItemContainer>
+      <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
+      <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
       <Footer></Footer>
     </div>
   );
