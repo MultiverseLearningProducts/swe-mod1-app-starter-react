@@ -1,7 +1,9 @@
 const express = require('express');
 
 const {sequelize} = require('./db');
-const {Plant} = require('./models');
+const {Product} = require('./models/index');
+
+
 
 const seed = require('./seed')
 
@@ -23,15 +25,16 @@ app.use(express.static('public'));
 
 seed();
 
-app.get('/plants', async (req, res) => {
-    const plants= await Plant.findAll()
-    res.json(plants)
+app.get('/products', async (req, res) => {
+    const products= await Product.findAll()
+    res.json(products)
 })
 
-app.get('/plants/:id', async (req, res) => {
-    const plant = await Plant.findByPk(req.params.id)
-    res.json({plant})
+app.get('/products/:id', async (req, res) => {
+    const product = await Product.findByPk(req.params.id)
+    res.json({product})
 })
+
 
 app.listen(PORT, () => {
     sequelize.sync({force: true});
