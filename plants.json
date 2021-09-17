@@ -3,47 +3,128 @@
     {
       "name": "Coral Bells",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/199-large_default.jpg?v=1580380409",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Dusty Miller",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/227-large_default.jpg?v=1580439066",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Common Yarrow",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/151-large_default.jpg?v=1580379456",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Eastern Redbud",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/229-large_default.jpg?v=1580435902",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Eulalia Grass",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/256-large_default.jpg?v=1580435931",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Fan Flower",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/191-large_default_bdf68ca7-5284-412c-9fec-78235d9cd046.jpg?v=1580438028",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Egyptian Papyrus",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/198-large_default_3b2e9138-0286-48ee-983f-c8fb82a3a443.jpg?v=1580438028",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description":"Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Dahoon Holly",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/232-large_default.jpg?v=1580435931",
-      "price": "12.99"
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
     },
     {
       "name": "Calamus",
       "image": "https://cdn.shopify.com/s/files/1/0317/0687/3992/products/245-large_default.jpg?v=1580435931",
-      "price": "12.99"
-    }
+      "price": "12.99",
+      "type" : "plant",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    },
+    {
+      "name": "Coffee Beans Sale",
+      "image": "https://cdn.shopify.com/s/files/1/0411/0660/4200/products/12-3.jpg?v=1592553990",
+      "price": "29.95",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    },
+    {
+      "name": "Coffee Beans Cararo Sale",
+      "image": "https://cdn.shopify.com/s/files/1/0411/0660/4200/products/8.3.jpg?v=1592039719",
+      "price": "15.00",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    },
+    {
+      "name": "Coffee Beans Robusta",
+      "image": "https://cdn.shopify.com/s/files/1/0411/0660/4200/products/5.2.jpg?v=1592041258",
+      "price": "149.95 ",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    },
+    {
+      "name": "Coffee Beans Carraro Globo Rosso Variable",
+      "image": "https://cdn.shopify.com/s/files/1/0411/0660/4200/products/7.1.jpg?v=1592041363",
+      "price": "20.00",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    }, 
+    {
+      "name": "Coffee Beans Simple",
+      "image": "https://cdn.shopify.com/s/files/1/0411/0660/4200/products/11.jpg?v=1592042420",
+      "price": "24.95",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    }, 
+    {
+      "name": "FIVE STAR COFFEE COFFE CUP MOMENTS SIGNATURE ROMANCE SAMPLER PACKAGE",
+      "image": "https://cdn.shopify.com/s/files/1/0073/8813/5537/products/five_star_coffee_coffe_cup_moments_signature_romance_sampler_package_1_470x509_crop_top.png?v=1540900391",
+      "price": "26.00",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    }, 
+    {
+      "name": "GUILT-FREE DECAF BY FINDLAYS FINEST GOURMET COFFEE",
+      "image": "https://cdn.shopify.com/s/files/1/0073/8813/5537/products/guilt_free_decaf_by_findlays_finest_gourmet_coffee_1_470x509_crop_top.png?v=1540900406",
+      "price": "36.00",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    }, 
+    {
+      "name": "PUROAST LOW ACID COFFEE SINGLE SERVE KEURIG COMPATIBLE",
+      "image": "https://cdn.shopify.com/s/files/1/0073/8813/5537/products/puroast_low_acid_coffee_single_serve_keurig_compatible_1_470x509_crop_top.png?v=1540900555",
+      "price": "20.00",
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    }, 
+    {
+      "name": "DON FRANCISCO HAWAIIAN HAZELNUT COFFEE",
+      "image": "https://cdn.shopify.com/s/files/1/0073/8813/5537/products/don_francisco_hawaiian_hazelnut_coffee_1_470x509_crop_top.png?v=1540900349",
+      "price": "19.00" ,
+      "type" : "coffee",
+      "description": "Fusce fermentum odio nec arcu. Praesent vestibulum dapibus nibh. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Phasellus dolor"
+    } 
   ]
 }
