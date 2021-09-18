@@ -1,8 +1,11 @@
 {
   "data": [
-      {"name" : "Mars", "image" : "https://64.media.tumblr.com/12cd128183713bf928bda87a24f22487/tumblr_ne6jee85PM1tha1vgo1_250.gif"},
-      {"name" : "Moon", "image": "https://cdn.streamelements.com/uploads/1887a0da-3642-4795-b5f5-774d5b377e52.gif"},
-      {"name" : "Saturn", "image": "https://64.media.tumblr.com/1564fcf74adc3fe6542c34b6a1f05de1/tumblr_na9lew0bNS1tha1vgo1_r1_250.gifv"}
+      {"studentId" : 1, "firstName" : "Alfreds", "lastName" : "Maria", "campus" : "Saturn"},
+      {"studentId" : 2, "firstName" : "Ben", "lastName" : "Tate", "campus" : "Mars"},
+      {"studentId" : 3, "firstName" : "Charles", "lastName" : "Smith", "campus" : "Moon"},
+      {"studentId" : 4, "firstName" : "Dan", "lastName" : "Hooks", "campus" : "Moon"},
+      {"studentId" : 5, "firstName" : "Eric", "lastName" : "Taylor", "campus" : "Mars"},
+      {"studentId" : 6, "firstName" : "Jen", "lastName" : "Phillips", "campus" : "Saturn"}
   ]  
 }
 

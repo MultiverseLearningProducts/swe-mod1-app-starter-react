@@ -6,38 +6,33 @@ import { EnrollStudent } from './EnrollStudent';
 
 export const App = () => {
 
-	// const [user, setUser] = useState("")
-	// const [student, setStudents] = useState(["Abdi", "Sharon", "Elizabeth", "James"])
-
-	const [sauces, setSauces] = useState([])
-	const campusList = useState(['All','Mars', 'Moon', 'Saturn'])
-
+	// variable for seed data
+	const [studentList, setStudents] = useState([])
 
 	// function handleClick(e) {
 	// 	const updatedMessage = message + '🔥';
 	// 	setMessage(updatedMessage)
 	// }
 
-	async function fetchSauces(){
+	async function fetchStudents(){
 		try {
 			const response = await fetch('http://localhost:3000/sauces');
 			const responseJSON = await response.json();
-			setSauces(responseJSON)
+			setStudents(responseJSON);
 		} catch (err) {
 			console.log("Oh no an error! ", err)
 		}
 	}
 
 	useEffect(() => {
-		fetchSauces()
+		fetchStudents()
 	}, []);
 
 	return (
 		<div>
-			{/* <LoginContainer /> */}
-			<ViewStudentContainer items={sauces} campuses={campusList} />
+			<LoginContainer />
+			{/* <ViewStudentContainer students={studentList} /> */}
 			{/* <EnrollStudent /> */}
-			
 		</div>
 	)
 }
