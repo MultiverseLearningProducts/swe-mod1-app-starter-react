@@ -7,6 +7,7 @@ import {
 	Route,
   Switch
 } from "react-router-dom";
+import SingleItemContainer from "./SingleItemContainer";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -68,9 +69,11 @@ export const App = () => {
     fetchProducts();
   }, []);
 
+ 
+
   return (
   
-       <div className="App">
+      <div className="App">
           <Navbar></Navbar>
             <Switch>
                 <Route path="/plants">
@@ -79,8 +82,12 @@ export const App = () => {
                 <Route path="/coffees">
                   <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
                 </Route>
+                <Route path="/plant/:id">
+                  <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
+                </Route>
               </Switch>
             <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
+            
           <Footer></Footer>
         </div>
   );
