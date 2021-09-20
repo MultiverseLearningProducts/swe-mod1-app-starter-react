@@ -11,4 +11,3 @@ ReactDOM.render(
 	</HashRouter>,
 	document.getElementById("root")
   );
-  

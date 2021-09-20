@@ -81,6 +81,7 @@ export const App = () => {
                 </Route>
               </Switch>
             <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
+            
           <Footer></Footer>
         </div>
   );
