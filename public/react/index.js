@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'regenerator-runtime/runtime'
-import { BrowserRouter as Router} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import {App} from './components/App';
 
 ReactDOM.render(
-	<React.StrictMode>
-	  <Router>
+	<HashRouter>
 		<App />
-	  </Router>
-	</React.StrictMode>,
+	</HashRouter>,
 	document.getElementById("root")
   );
   

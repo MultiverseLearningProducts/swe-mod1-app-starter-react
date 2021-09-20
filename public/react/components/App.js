@@ -3,7 +3,10 @@ import { ItemContainer } from "./ItemContainer";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cart from "./Cart";
-import { Route, Switch } from "react-router-dom";
+import {
+	Route,
+  Switch
+} from "react-router-dom";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -42,14 +45,15 @@ export const App = () => {
     try {
       const response = await fetch("http://localhost:3000/products");
       const responseJSON = await response.json();
+      console.log (responseJSON);
       let tempPlant=[];
       let tempCoffee=[];
-      for( let i = 0; i < responseJSON.length(); i++){
-          if (item.type=="plant") {
-            tempPlant=[...tempPlant,item];
+     for( let i = 0; i < responseJSON.length; i++){
+          if (responseJSON[i].type =="plant") {
+            tempPlant=[...tempPlant,responseJSON[i]];
             }
-          else if (item.type=="coffee") {
-            tempCoffee=[...tempCoffee,item]    
+          else if (responseJSON[i].type =="coffee") {
+            tempCoffee=[...tempCoffee, responseJSON[i]]    
         }
       }
           
@@ -65,18 +69,19 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Navbar></Navbar>
-        <Switch>
-            <Route path="/plants">
-              <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
-            </Route>
-            <Route path="/coffees">
-              <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
-            </Route>
-        </Switch>
-      <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
-      <Footer></Footer>
-    </div>
+  
+       <div className="App">
+          <Navbar></Navbar>
+            <Switch>
+                <Route path="/plants">
+                  <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
+                </Route>
+                <Route path="/coffees">
+                  <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
+                </Route>
+              </Switch>
+            <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
+          <Footer></Footer>
+        </div>
   );
 };

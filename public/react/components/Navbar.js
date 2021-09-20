@@ -8,7 +8,7 @@ export default function Navbar() {
         <h2 className="nav-item">
           <Link to="/plants">Plants</Link>
         </h2>
-        <h2 className="nav-item">
+        <h2 className="nav-item"> 
         <Link to="/coffees">Coffee</Link>
         </h2>
       </div>
