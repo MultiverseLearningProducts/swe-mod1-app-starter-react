@@ -2,22 +2,45 @@ import React, { useState, useEffect } from "react";
 
 export const StudentTable = (props) => {
 
-    // sets initial value all students, not working
-    const [students,setStudents] = useState(props.students)
+    const [students,setStudents] = useState([])
     const campuses = ["All", "Moon", "Mars", "Saturn"]
     const [filter, setFilter] = useState("All")
+    const [allStudents, setAllStudents] = useState([])
+
+    async function fetchStudents(){
+		try {
+			const response = await fetch('http://localhost:3000/sauces');
+			const responseJSON = await response.json();
+			setStudents(responseJSON);
+            setAllStudents(responseJSON);
+		} catch (err) {
+			console.log("Oh no an error! ", err)
+		}
+	}
+
+	useEffect(() => {
+		fetchStudents()
+	}, []);
 
     function handleChange (e) {
         const newFilter = e.target.value
-        setFilter(newFilter)
-        
+        console.log("New filter: ", newFilter)
+
         // update students based on filter
-        if (filter == "All"){
-            setStudents(props.students)
+        if (newFilter == "All"){
+            console.log("All students: ", allStudents)
+            setStudents(allStudents)
+            setFilter(newFilter)
+            console.log("Filter: ", filter)
         } else {
-            setStudents(props.students.filter(student => filter == student.campus))
+            const filteredStudents = allStudents.filter(student => newFilter == student.campus)
+            console.log("filtered students: ", filteredStudents)
+            setStudents(filteredStudents)
+            setFilter(newFilter)
         }
     }
+
+    console.log("students in table: ", students)
 
     return (
         <>
@@ -43,7 +66,7 @@ export const StudentTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {   // row for each student, not working renders students based on previous filter
+                    {   // row for each student
                         students.map((student, idx) => {
                             return (
                                 <tr key={idx} value={student}>

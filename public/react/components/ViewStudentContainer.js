@@ -28,7 +28,7 @@ export const ViewStudentContainer = (props) => {
 				</nav>
 			</header>
 			<main className="main">
-				<StudentTable students={props.students} />
+				<StudentTable />
 			</main>
 			<footer className="footer">
 			</footer>
