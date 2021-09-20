@@ -1,5 +1,5 @@
-# swe-inventory-app-starter
-React Boilerplate code for SWE Mod-1 Project
+# react-lms-app
+React code for SWE Mod-1 Project
 
 ## How to use 
 1. Fork this repo
