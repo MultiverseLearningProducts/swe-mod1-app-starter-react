@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StudentTable } from "./StudentTable";
+import {Route, Link 
+} from 'react-router-dom';
 
 export const ViewStudentContainer = (props) => {
 
@@ -13,16 +15,23 @@ export const ViewStudentContainer = (props) => {
 				</div>
 				<nav className="header-nav">
 					<h3 className="nav-item">
-						<a href="#" className="nav-link">Profile</a>
+						{/* <a href="#" className="nav-link">Profile</a> */}
                     </h3>
                     <h3 className="nav-item">
+		    <Link to="/viewStudents">
                         <a href="#" className="nav-link">View Students</a>
+			</Link>
+			
                     </h3>
                     <h3 className="nav-item">
+		    <Link to="/enrollStudent">
                         <a href="#" className="nav-link">Enroll Students</a>
+		    </Link>
                     </h3>
 					<h3 className="nav-item">
+					<Link to="/login">
 						<a href="#" className="nav-link">Log Out</a>
+					</Link>
                     </h3>
                     <img src="https://icons-for-free.com/iconfiles/png/512/avatar+person+profile+user+icon-1320166578424287581.png" className="icon-avatar2" alt=""/>
 				</nav>

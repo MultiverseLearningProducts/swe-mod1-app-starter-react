@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {Route, Link 
+} from 'react-router-dom';
 
 export const LoginContainer = (props) => {
 
@@ -23,7 +25,9 @@ export const LoginContainer = (props) => {
 						<input id="username" placeholder="Username" type="text" required/> <br/>
                 		<label for="password">Password: </label>
 						<input id="password" placeholder="Password" type="text" required/><br/>
+						<Link to="/viewStudents">
                 		<button type="submit">Login</button>
+						</Link>
             		</form>
         		</div>
     		</div>

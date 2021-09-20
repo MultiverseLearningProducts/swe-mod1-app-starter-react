@@ -1,6 +1,9 @@
 import React, {useState} from "react";
+import {Route, Link 
+} from 'react-router-dom';
 
 export const EnrollStudent = (props) => {
+    
 
 
     return (
@@ -12,16 +15,22 @@ export const EnrollStudent = (props) => {
 				</div>
 				<nav className="header-nav">
 					<h3 className="nav-item">
-						<a href="#" className="nav-link">Profile</a>
+						{/* <a href="#" className="nav-link">Profile</a> */}
                     </h3>
                     <h3 className="nav-item">
+                    <Link to="/viewStudents">
                         <a href="#" className="nav-link">View Students</a>
+                        </Link>
                     </h3>
                     <h3 className="nav-item">
                         <a href="#" className="nav-link">Enroll Students</a>
                     </h3>
 					<h3 className="nav-item">
+                    <Link to="/login">
 						<a href="#" className="nav-link">Log Out</a>
+                    </Link>
+                    
+
                     </h3>
                     <img src="https://icons-for-free.com/iconfiles/png/512/avatar+person+profile+user+icon-1320166578424287581.png" className="icon-avatar2" alt=""/>
 				</nav>
