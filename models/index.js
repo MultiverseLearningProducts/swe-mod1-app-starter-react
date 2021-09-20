@@ -5,8 +5,10 @@ const {sequelize} = require('../db')
 class Sauce extends Model {}
 
 Sauce.init({
-    name: DataTypes.STRING,
-    image: DataTypes.STRING,
+    studentId: DataTypes.INTEGER,
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    campus: DataTypes.STRING
 }, {
     sequelize,
     timestamps: false,

@@ -12,7 +12,6 @@ export const LoginContainer = (props) => {
         		</header>
         		<h1 class="teacher-connect">Teachers Connect</h1>
     		</div>
-
     		<div class="main-container">
         		<div class="avatar-container">
             		<img class="icon-avatar" src="https://icons-for-free.com/iconfiles/png/512/avatar+person+profile+user+icon-1320166578424287581.png" alt=""/>
@@ -20,15 +19,15 @@ export const LoginContainer = (props) => {
         
         		<div class="login">
             		<form action="">
-                		<input id="username" placeholder="Username" type="text"/> <br/>
-                		<input id="password" placeholder="Password" type="text" required/><br/>
+                		<label for="username">Username: </label>
+						<input id="username" placeholder="Username" type="text" required/> <br/>
+                		<label for="password">Password: </label>
+						<input id="password" placeholder="Password" type="text" required/><br/>
                 		<button type="submit">Login</button>
             		</form>
         		</div>
-        
     		</div>
 		</div>
 	)
 
 }
-		
