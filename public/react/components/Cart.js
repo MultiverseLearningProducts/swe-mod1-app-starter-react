@@ -20,10 +20,18 @@ export default function Cart(props) {
         <div key={item.id}>
           <div>{item.name}</div>
           <div className="cart-item-buttons">
-            <button onClick={() => onAdd(item)} className="add">
+            <button
+              aria-label="Increase Item Quantity"
+              onClick={() => onAdd(item)}
+              className="inc-qty"
+            >
               +
             </button>
-            <button onClick={() => onRemove(item)} className="remove">
+            <button
+              aria-label="Decrease Item Quantity"
+              onClick={() => onRemove(item)}
+              className="dec-qty"
+            >
               -
             </button>
           </div>
@@ -60,7 +68,10 @@ export default function Cart(props) {
           </div>
           <hr />
           <div className="row">
-            <button onClick={() => alert("Implement Checkout")}>
+            <button
+              aria-label="checkout"
+              onClick={() => alert("Implement Checkout")}
+            >
               Checkout
             </button>
           </div>
