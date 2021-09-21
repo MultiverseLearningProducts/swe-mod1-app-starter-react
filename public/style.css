@@ -74,49 +74,60 @@ body {
   flex-wrap: wrap;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
 }
 
-#myImage {
-  opacity: 0.4;
-  filter: alpha(opacity=40); /* msie */
+.card-name,
+.card-price {
+  text-align: center;
 }
 
 .hover-container {
   position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-
-.hover-container:hover .overlay {
-  opacity: 1;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
+  transition: .5s ease;
   opacity: 0;
-  transition: 0.3s ease;
-}
-
-.icon {
-  color: white;
-  font-size: 100px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.card-name,
-.card-price {
-  text-align: center;
+.hover-container:hover .card-img {
+  opacity: 0.3;
+}
+
+.hover-container:hover .overlay  {
+  opacity: 1;
+}
+
+.cart-btn:hover .cart-icon{
+  color:#518432;
+}
+
+.cart-btn:hover a{
+  color:#518432;
+}
+
+.cart-btn {
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  color:black;
 }
 
 /* END CARDS ------------------------------------------------------------------------- */
@@ -187,3 +198,4 @@ body {
 }
 
 /* END FOOTER -------------------------------------------------------- */
+
