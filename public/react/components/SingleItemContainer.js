@@ -51,12 +51,10 @@ return (
           <h3 >{singleItem.description}</h3> 
           <div className="button-group">
       <ButtonGroup variant="contained" aria-label="outlined primary button group">
-      <Button>
-      <Link to="/plants"> </Link>Back
-      </Button>
-      <Button className="cart-btn"
+        <Button component={Link} to={'/plants'}>Back</Button>
+        <Button className="cart-btn"
             aria-label="Add To Cart"
-            onClick={() => onAdd(props.item)}>Add to Cart</Button>
+            onClick={() => onAdd(singleItem)}>Add to Cart</Button>
     
     </ButtonGroup>
       
