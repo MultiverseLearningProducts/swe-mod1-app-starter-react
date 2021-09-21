@@ -3,17 +3,14 @@ import { ItemContainer } from "./ItemContainer";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cart from "./Cart";
-import {
-	Route,
-  Switch
-} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import SingleItemContainer from "./SingleItemContainer";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
-  const [plants,setPlants]=useState([]);
-  const [coffees,setCoffees]=useState([]);
+  const [plants, setPlants] = useState([]);
+  const [coffees, setCoffees] = useState([]);
 
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -26,6 +23,7 @@ export const App = () => {
     } else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
+    alert("Successfully Added To Cart!");
   };
 
   const onRemove = (product) => {
@@ -46,20 +44,19 @@ export const App = () => {
     try {
       const response = await fetch("http://localhost:3000/products");
       const responseJSON = await response.json();
-      console.log (responseJSON);
-      let tempPlant=[];
-      let tempCoffee=[];
-     for( let i = 0; i < responseJSON.length; i++){
-          if (responseJSON[i].type =="plant") {
-            tempPlant=[...tempPlant,responseJSON[i]];
-            }
-          else if (responseJSON[i].type =="coffee") {
-            tempCoffee=[...tempCoffee, responseJSON[i]]    
+      console.log(responseJSON);
+      let tempPlant = [];
+      let tempCoffee = [];
+      for (let i = 0; i < responseJSON.length; i++) {
+        if (responseJSON[i].type == "plant") {
+          tempPlant = [...tempPlant, responseJSON[i]];
+        } else if (responseJSON[i].type == "coffee") {
+          tempCoffee = [...tempCoffee, responseJSON[i]];
         }
       }
-          
-     setPlants(tempPlant);
-     setCoffees(tempCoffee);
+
+      setPlants(tempPlant);
+      setCoffees(tempCoffee);
     } catch (err) {
       console.log("Oh no an error! ", err);
     }
@@ -69,26 +66,22 @@ export const App = () => {
     fetchProducts();
   }, []);
 
- 
-
   return (
-  
-      <div className="App">
-          <Navbar></Navbar>
-            <Switch>
-                <Route path="/plants">
-                  <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
-                </Route>
-                <Route path="/coffees">
-                  <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
-                </Route>
-                <Route path="/plant/:id">
-                  <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
-                </Route>
-              </Switch>
-            <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
-            
-          <Footer></Footer>
-        </div>
+    <div className="App">
+      <Navbar cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Navbar>
+      <Switch>
+        <Route path="/plants">
+          <ItemContainer onAdd={onAdd} items={plants}></ItemContainer>
+        </Route>
+        <Route path="/coffees">
+          <ItemContainer onAdd={onAdd} items={coffees}></ItemContainer>
+        </Route>
+        <Route path="/plant/:id">
+          <SingleItemContainer onAdd={onAdd}></SingleItemContainer>
+        </Route>
+      </Switch>
+
+      <Footer></Footer>
+    </div>
   );
 };

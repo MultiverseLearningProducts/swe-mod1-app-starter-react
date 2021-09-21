@@ -1,7 +1,9 @@
 import React from "react";
+import Divider from "@mui/material/Divider";
 
 export default function Cart(props) {
   const { cartItems, onAdd, onRemove } = props;
+
   const itemsPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.qty,
     0
@@ -12,32 +14,35 @@ export default function Cart(props) {
   return (
     <div className="cart-container">
       <h2>My Cart</h2>
-      <div>
-        {cartItems.length === 0 && <div>Oops, your cart is empty!</div>}
-      </div>
+      <div>{cartItems.length === 0 && <h3>Oops, your cart is empty!</h3>}</div>
       {/* LIST OF ITEMS */}
       {cartItems.map((item) => (
-        <div key={item.id}>
-          <div>{item.name}</div>
-          <div className="cart-item-buttons">
-            <button
-              aria-label="Increase Item Quantity"
-              onClick={() => onAdd(item)}
-              className="inc-qty"
-            >
-              +
-            </button>
-            <button
-              aria-label="Decrease Item Quantity"
-              onClick={() => onRemove(item)}
-              className="dec-qty"
-            >
-              -
-            </button>
-          </div>
-          <div>
-            {item.qty} x ${item.price.toFixed(2)}
-          </div>
+        <div className="cart-item-container" key={item.id}>
+          <section className="cart-item-left">
+            <img className="cart-item-img" alt={item.name} src={item.image} />
+          </section>
+          <section className="cart-item-right">
+            <p className="cart-item-name">{item.name}</p>
+            <div className="cart-item-buttons">
+              <button
+                aria-label="Increase Item Quantity"
+                onClick={() => onAdd(item)}
+                className="inc-qty"
+              >
+                +
+              </button>
+              <button
+                aria-label="Decrease Item Quantity"
+                onClick={() => onRemove(item)}
+                className="dec-qty"
+              >
+                -
+              </button>
+            </div>
+            <p>QTY: {item.qty}</p>
+            <p>${item.qty * item.price}</p>
+          </section>
+          <Divider />
         </div>
       ))}
 
@@ -45,25 +50,21 @@ export default function Cart(props) {
 
       {cartItems.length !== 0 && (
         <>
-          <hr></hr>
+          <Divider />
           <div className="row">
-            <div className="col-2">Items Price</div>
-            <div className="col-1 text-right">${itemsPrice.toFixed(2)}</div>
+            <div className="col-2">Items Price: ${itemsPrice.toFixed(2)}</div>
           </div>
           <div className="row">
-            <div className="col-2">Tax Price</div>
-            <div className="col-1 text-right">${taxPrice.toFixed(2)}</div>
-          </div>
-          <div className="row">
-            <div className="col-2">Shipping Price</div>
-            <div className="col-1 text-right">${shippingPrice.toFixed(2)}</div>
+            <div className="col-2">Tax Price: ${taxPrice.toFixed(2)}</div>
           </div>
           <div className="row">
             <div className="col-2">
-              <strong>Total Price</strong>
+              Shipping Price: ${shippingPrice.toFixed(2)}
             </div>
-            <div className="col-1 text-right">
-              <strong>${totalPrice.toFixed(2)}</strong>
+          </div>
+          <div className="row">
+            <div className="col-2">
+              <strong>Total Price: ${totalPrice.toFixed(2)}</strong>
             </div>
           </div>
           <hr />
