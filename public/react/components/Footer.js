@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-left">
         <div className="footer-item">
           <h3>FOLLOW US</h3>
-          <ul aria-label='Follow Us Links'>
+          <ul role="list" aria-label='Follow Us Links'>
             <li>
               <a href="#">Twitter</a>
             </li>
@@ -22,7 +22,7 @@ export default function Footer() {
       <div className="footer-center">
         <div className="footer-item">
           <h3>ABOUT</h3>
-          <ul aria-label='About Links'>
+          <ul role="list" aria-label='About Links'>
             <li>
               <a href="#">Help Center</a>
             </li>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
         <div className="footer-item">
           <h3>SUPPORT</h3>
-          <ul aria-label='Support Links'>
+          <ul role="list" aria-label='Support Links'>
             <li>
               <a href="#">Sitemap</a>
             </li>
@@ -62,7 +62,7 @@ export default function Footer() {
         </div>
         <div className="footer-item">
           <h3>SHIPPING</h3>
-          <ul aria-label="Shipping Links">
+          <ul role="list" aria-label="Shipping Links">
             <li>
               <a href="#" >Help Center</a>
             </li>
@@ -83,7 +83,7 @@ export default function Footer() {
       </div>
       <div className="footer-right">
         <div className="footer-item">
-          <h3 aria-label='Subscribe'>SUBSCRIBE</h3>
+          <h3>SUBSCRIBE</h3>
         </div>
       </div>
     </footer>
