@@ -85,6 +85,9 @@ export const App = () => {
                 <Route path="/plant/:id">
                   <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
                 </Route>
+                <Route path="/coffee/:id">
+                  <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
+                </Route>
               </Switch>
             <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
             

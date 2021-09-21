@@ -141,30 +141,71 @@ body {
   padding: 15px;
   flex-direction: column;
 }
-.grid-container {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  box-sizing: border-box;
-}
-
-.grid-item {
-  background-color: rgba(255, 255, 255, 0.4);
-  border: 0px solid #ffffff;
-  padding: 15px;
-  margin: 10px 10px;
-  font-size: 20px;
-  color: #000000;
-  text-align: center;
-}
-
-ul, h3 {
-  font-family: "Arial", sans-serif;
-  color: #484848;
-  text-align: left;
-  text-decoration: none;
-}
 
 /* END CART ------------------------------------------------------------------------- */
+
+/* SINGLE ITEM DISPLAY ----------------------------------------------------------*/
+
+.single-item-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding: 15px;
+  background-color: white;
+  border-bottom: 4px solid #e5e4e2;
+  justify-content: center;
+}
+
+.singleitem-left {
+  display: flex;
+  width: 33%;
+  justify-content: flex-start;
+  
+}
+
+.singleitem-center {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+  
+}
+
+.singleitem-right {
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+  
+}
+
+.single-item {
+  margin: 10px;
+}
+
+.singleItem-img {
+  border: 2px solid white;
+  height: 800px;
+  width: 600px;
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+  .card-title {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 20px;
+  }
+
+/*END SINGLE ITEM DISPLAY-----------------------------------*/
 
 /* START FOOTER -------------------------------------------------------- */
 

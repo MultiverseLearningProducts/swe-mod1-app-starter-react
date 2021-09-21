@@ -2,6 +2,9 @@ import React, {useState,useEffect} from 'react'
 import {useParams,Link} from "react-router-dom";
 import { Item } from './Item';
 import {Cart} from './Cart';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+
 export default function SingleItemContainer(props) {
     const [singleItem ,setSingleItem]=useState({ });
     let { id } = useParams();
@@ -25,53 +28,42 @@ export default function SingleItemContainer(props) {
     }, []);
 
 
-   
-{/* <div classNameName="card">
-        <img classNameName="card-img"src={singleItem.image}/>
-        <div classNameName="row">
-            <div classNameName="col-2">{singleItem.name}</div>
-            <div classNameName="col-1 text-right">${singleItem.price}</div>
-          </div>
-        <h3 classNameName="card-name"> {singleItem.name} </h3>
-        <h3 classNameName="card-price">$ {singleItem.price}</h3>
-        <h3 classNameName="card-name">{singleItem.description} </h3>
-        <Link to="/plants">Back </Link>
-        <button onClick={() => onAdd(props.singleItem)} classNameName="add">
-            Add to Cart</button>
-    
-</div> */}
-
 return (
-    <div className="grid-singleItem">
-     <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"></div>
-            <div className="col mb-4">
-
-            <div className="card">
     
-	
-      <div className="card-body">
-        <img src={singleItem.image} className="card-img-top singleItem-img"/><br/>
-        <ul>
+    <div className="single-item-container">
+      <section className="singleitem-left" aria-label="shopping tabs">
+      <div className="single-item">
+          <img src={singleItem.image} alt={singleItem.name} className="singleItem-img"/><br/>
+      </div>
+      </section>
+      <section className="singleitem-center" aria-label="home tab">
+        <div className="plant-image">
+          <img src={singleItem.image} alt={singleItem.name} className="card-img"/><br/>
+        </div>
+        <div className="plant-image">
+          <img src={singleItem.image} alt={singleItem.name} className="card-img"/><br/>
+        </div>
+      </section>
+      <section className="singleitem-right" aria-label="cart tab">
+      <div className="single-item">
         <h2 className="card-title">{singleItem.name}</h2>
-        <h3>Price: ${singleItem.price} USD</h3>
-        <h3>Description: {singleItem.description}</h3>
-       
-        </ul><br/>
-     
-   
-<a className="btn" href="#"><button className="btn btn-info btnback">
-<Link to="/plants">Back </Link></button></a>
-
-  
-<a className="btn" href="#"><button className="btn btn-info btnback">
-<Link to="/plants">Add to Cart </Link></button></a>
-
-  </div>
-</div>
-</div>
-</div>
-</div>
+          <h3 className="card-title"> ${singleItem.price} USD</h3>
+          <h3 >{singleItem.description}</h3> 
+          <div className="button-group">
+      <ButtonGroup variant="contained" aria-label="outlined primary button group">
+      <Button>
+      <Link to="/plants"> </Link>Back
+      </Button>
+      <Button className="cart-btn"
+            aria-label="Add To Cart"
+            onClick={() => onAdd(props.item)}>Add to Cart</Button>
+    
+    </ButtonGroup>
+      
+      </div>
+      </div>
+      </section>
+    </div>
 
  )
 }
