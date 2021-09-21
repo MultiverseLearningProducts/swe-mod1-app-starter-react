@@ -44,8 +44,8 @@ export const StudentTable = (props) => {
 
     return (
         <>
-        <div>
-            <label htmlFor="campus-select">Filter Students by Location</label>
+        <div className="filter-student">
+            <label htmlFor="campus-select">Filter Students by Location</label><br/>
             <select id="campus-select" onChange={handleChange}>
                 {
                     campuses.map((campus, idx) => {
@@ -69,12 +69,12 @@ export const StudentTable = (props) => {
                     {   // row for each student
                         students.map((student, idx) => {
                             return (
-                                <tr key={idx} value={student}>
+                                <tr key={idx} value={student} className="student-row">
                                     <td>{student.studentId}</td>
                                     <td>{student.firstName}</td>
                                     <td>{student.lastName}</td>
                                     <td>{student.campus}</td>
-                                    <td><a href="">Unenroll</a></td>
+                                    <td><a className="table-link" href="">Unenroll</a></td>
                                 </tr>
                             )
                         })
