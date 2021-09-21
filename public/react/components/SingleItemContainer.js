@@ -4,6 +4,10 @@ import { Item } from './Item';
 import {Cart} from './Cart';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import Rating from '@mui/material/Rating';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 export default function SingleItemContainer(props) {
     const [singleItem ,setSingleItem]=useState({ });
@@ -46,6 +50,7 @@ return (
       </section>
       <section className="singleitem-right" aria-label="cart tab">
       <div className="single-item">
+      <Rating name="size-medium" defaultValue={2} />
         <h2 className="card-title">{singleItem.name}</h2>
           <h3 className="card-title"> ${singleItem.price} USD</h3>
           <h3 >{singleItem.description}</h3> 
@@ -57,7 +62,15 @@ return (
             onClick={() => onAdd(singleItem)}>Add to Cart</Button>
     
     </ButtonGroup>
-      
+    <h5>CATEGORIES:<span>Home,{singleItem.type}</span></h5>
+      <h5>SHARE <span>    </span>
+      <span>
+      <FacebookIcon></FacebookIcon>
+      <TwitterIcon></TwitterIcon>
+      <InstagramIcon></InstagramIcon>
+      </span>
+      </h5>
+
       </div>
       </div>
       </section>
