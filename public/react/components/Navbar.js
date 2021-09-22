@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartSideBar from "./CartSideBar";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const { cartItems, onAdd, onRemove } = props;
+
   return (
     <nav className="navbar">
       <section className="navbar-left" aria-label="shopping tabs">
@@ -19,7 +22,11 @@ export default function Navbar() {
       </section>
       <section className="navbar-right" aria-label="cart tab">
         <h2 className="nav-item">
-          <a href="#">Cart</a>
+          <CartSideBar
+            cartItems={cartItems}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          ></CartSideBar>
         </h2>
       </section>
     </nav>
