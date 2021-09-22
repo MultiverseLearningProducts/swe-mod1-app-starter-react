@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cart from "./Cart";
 import { Route, Switch } from "react-router-dom";
-
+import  Home  from "./Home";
 import SingleItemContainer from "./SingleItemContainer";
 
 export const App = () => {
@@ -69,14 +69,16 @@ export const App = () => {
   return (
   
       <div className="App">
-          <Navbar></Navbar>
+          <Navbar cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Navbar>
             <Switch>
                 <Route path="/home">
                   <Home></Home>
                 </Route>
+                
                 <Route path="/plants">
                   <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
                 </Route>
+
                 <Route path="/coffees">
                   <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
                 </Route>
@@ -86,9 +88,7 @@ export const App = () => {
                 <Route path="/coffee/:id">
                   <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
                 </Route>
-              </Switch>
-            <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
-            
+              </Switch>       
           <Footer></Footer>
         </div>
   );
