@@ -14,9 +14,6 @@ export const ViewStudentContainer = (props) => {
 					<h1>MHAC</h1>
 				</div>
 				<nav className="header-nav">
-					<h2 className="nav-item">
-						{/* <a href="#" className="nav-link">Profile</a> */}
-                    </h2>
                     <h2 className="nav-item">
 		    <Link to="/viewStudents">
                         <a href="#" className="nav-link">View Students</a>
