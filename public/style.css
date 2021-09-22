@@ -346,6 +346,46 @@ body {
     top: -130px;
   }
 
+  #back-btn  {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  
+  }
+  #back-btn:hover {
+    background-color: #518432;
+    border: 2px solid #518432;
+    color: white;
+    transition: 0.5s ease;
+  }
+  
+
+  #add-btn {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #add-btn:hover {
+    background-color: #518432;
+    border: 2px solid #518432;
+    color: white;
+    transition: 0.5s ease;
+  }
+  #description-title {
+    font-weight: 200;
+  }
+  #name-title {
+    font-size: 25px;
+  }
+  
 /*END SINGLE ITEM DISPLAY-----------------------------------*/
 
 /* START FOOTER -------------------------------------------------------- */

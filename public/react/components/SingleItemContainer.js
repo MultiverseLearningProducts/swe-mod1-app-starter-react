@@ -51,16 +51,14 @@ return (
       <section className="singleitem-right" aria-label="cart tab">
       <div className="single-item">
       <Rating name="size-medium" defaultValue={2} />
-        <h2 className="card-title">{singleItem.name}</h2>
+        <h2 id="name-title">{singleItem.name}</h2>
           <h3 className="card-title"> ${singleItem.price} USD</h3>
-          <h3 >{singleItem.description}</h3> 
+          <h3 id="description-title">{singleItem.description}</h3> 
           <div className="button-group">
       <ButtonGroup variant="contained" aria-label="outlined primary button group">
-        <Button component={Link} 
-        // <If condition={props.item.type=='plants'}>
-        // </If>
-        to={'/plants'}>Back</Button>
-        <Button className="cart-btn"
+        <Button id="back-btn" component={Link} 
+        to={singleItem.type=="plant"?'/plants':'/coffees'}>Back</Button>
+        <Button id="add-btn"
             aria-label="Add To Cart"
             onClick={() => onAdd(singleItem)}>Add to Cart</Button>
     
