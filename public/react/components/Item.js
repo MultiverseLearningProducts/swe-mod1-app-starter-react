@@ -43,6 +43,8 @@ export const Item = (props) => {
 
       <h3 className="card-name">{props.item.name} </h3>
       <h3 className="card-price">$ {props.item.price}</h3>
+  
+
     </div>
   );
 };

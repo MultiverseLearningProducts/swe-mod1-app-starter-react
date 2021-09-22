@@ -87,6 +87,9 @@ export const App = () => {
                   <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
                 </Route>
                 <Route path="/plant/:id">
+                  <SingleItemContainer onAdd={onAdd}  ></SingleItemContainer>
+                </Route>
+                <Route path="/coffee/:id">
                   <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
                 </Route>
               </Switch>
