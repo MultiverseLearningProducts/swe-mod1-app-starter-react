@@ -12,7 +12,7 @@ export default function Navbar(props) {
           <Link to="/plants">Plants</Link>
         </h2>
         <h2 className="nav-item">
-          <Link to="/coffees">Coffee</Link>
+          <Link to="/coffees">Coffee-Beans</Link>
         </h2>
       </section>
       <section className="navbar-center" aria-label="home tab">
