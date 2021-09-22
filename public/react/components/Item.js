@@ -24,8 +24,8 @@ export const Item = (props) => {
           >
             <FavoriteBorderIcon className="cart-icon"></FavoriteBorderIcon>
           </button>
-          <Link
-            to={`plant/${props.item.id}`}
+          <Link 
+            to={`plant/${props.item.id}`} 
             aria-label="View More Details"
             className="cart-btn"
           >

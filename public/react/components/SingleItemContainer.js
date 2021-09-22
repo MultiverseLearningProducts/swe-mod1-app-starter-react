@@ -42,10 +42,10 @@ return (
       </section>
       <section className="singleitem-center" aria-label="home tab">
         <div className="plant-image">
-          <img src={singleItem.image} alt={singleItem.name} className="card-img"/><br/>
+          <img src={singleItem.image} alt={singleItem.name} className="item-img"/><br/>
         </div>
         <div className="plant-image">
-          <img src={singleItem.image} alt={singleItem.name} className="card-img"/><br/>
+          <img src={singleItem.image} alt={singleItem.name} className="item-img"/><br/>
         </div>
       </section>
       <section className="singleitem-right" aria-label="cart tab">
@@ -56,7 +56,10 @@ return (
           <h3 >{singleItem.description}</h3> 
           <div className="button-group">
       <ButtonGroup variant="contained" aria-label="outlined primary button group">
-        <Button component={Link} to={'/plants'}>Back</Button>
+        <Button component={Link} 
+        // <If condition={props.item.type=='plants'}>
+        // </If>
+        to={'/plants'}>Back</Button>
         <Button className="cart-btn"
             aria-label="Add To Cart"
             onClick={() => onAdd(singleItem)}>Add to Cart</Button>

@@ -185,7 +185,7 @@ body {
 
 .singleItem-img {
   border: 2px solid white;
-  height: 800px;
+  height: 700px;
   width: 600px;
   display: block;
   margin-top: 10px;
@@ -203,6 +203,25 @@ body {
   .card-title {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
     font-size: 20px;
+  }
+
+  .item-img {
+    border: 2px solid white;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    position:relative;
+    top: -130px;
   }
 
 /*END SINGLE ITEM DISPLAY-----------------------------------*/
