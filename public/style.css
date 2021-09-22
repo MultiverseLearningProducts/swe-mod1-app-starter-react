@@ -70,7 +70,20 @@ align-items: center;
   width: 50%;
 }
 
+/* Buttons styling */
 
+button{
+
+}
+
+
+.submit-btn{
+
+}
+
+.cancel-btn{
+
+}
 
 /* View students page */
 .icon-avatar2{
@@ -101,7 +114,9 @@ th{
 }
 
 
-
+input{
+  padding: 5%
+}
 
 
 
