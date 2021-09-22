@@ -17,7 +17,7 @@ export default function Navbar(props) {
       </section>
       <section className="navbar-center" aria-label="home tab">
         <h2 className="nav-item">
-          <a href="#">Plant Shed</a>
+          <Link to="/home">Plant Shed</Link>
         </h2>
       </section>
       <section className="navbar-right" aria-label="cart tab">

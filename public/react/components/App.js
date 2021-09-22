@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cart from "./Cart";
 import { Route, Switch } from "react-router-dom";
+import  Home  from "./Home";
 import SingleItemContainer from "./SingleItemContainer";
 
 export const App = () => {
@@ -66,20 +67,29 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="App">
-      <Navbar cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Navbar>
-      <Switch>
-        <Route path="/plants">
-          <ItemContainer onAdd={onAdd} items={plants}></ItemContainer>
-        </Route>
-        <Route path="/coffees">
-          <ItemContainer onAdd={onAdd} items={coffees}></ItemContainer>
-        </Route>
-        <Route path="/plant/:id">
-          <SingleItemContainer onAdd={onAdd}></SingleItemContainer>
-        </Route>
-      </Switch>
-      <Footer></Footer>
-    </div>
+  
+      <div className="App">
+          <Navbar cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Navbar>
+            <Switch>
+                <Route path="/home">
+                  <Home></Home>
+                </Route>
+                
+                <Route path="/plants">
+                  <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
+                </Route>
+
+                <Route path="/coffees">
+                  <ItemContainer onAdd={onAdd} items={coffees} ></ItemContainer>
+                </Route>
+                <Route path="/plant/:id">
+                  <SingleItemContainer onAdd={onAdd}  ></SingleItemContainer>
+                </Route>
+                <Route path="/coffee/:id">
+                  <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
+                </Route>
+              </Switch>       
+          <Footer></Footer>
+        </div>
   );
 };
