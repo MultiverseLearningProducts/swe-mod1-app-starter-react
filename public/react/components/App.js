@@ -80,7 +80,6 @@ export const App = () => {
           <SingleItemContainer onAdd={onAdd}></SingleItemContainer>
         </Route>
       </Switch>
-
       <Footer></Footer>
     </div>
   );
