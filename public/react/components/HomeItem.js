@@ -7,15 +7,16 @@ export default function HomeItem() {
     
 
     return (
-        <div>
-                <img src={ Fourth } style={{ width: "48rem", height: "30rem"}} alt="plant1" />
+            <div className="home-item-p">
+                <div className="home-item-left">
+                    <img src={ Fourth }  alt="plant1" />
+                </div>
                 <br/>
                 <br/>
-            <Row>
-                <Col sm={{ size: 6, order: 2, offset: 1 }}>
-                    <img src={ Third }  style={{ width: "48rem", height: "30rem"}} id="plant2" />
-                </Col>
-            </Row>
+            
+                <div className="home-item-right">
+                    <img src={ Third } id="plant2" />
+                </div>
         </div>
 
     );
