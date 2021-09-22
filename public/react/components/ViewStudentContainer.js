@@ -26,7 +26,7 @@ export const ViewStudentContainer = (props) => {
 		    			</Link>
                     </h2>
 					<h2 className="nav-item">
-					<Link to="/login">
+					<Link to="/">
 						Log Out
 					</Link>
                     </h2>

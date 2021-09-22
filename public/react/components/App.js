@@ -10,7 +10,7 @@ export const App = () => {
 
 	return (
 		<div>
-			<Route path="/login">
+			<Route exact path="/">
 			<LoginContainer />
 			</Route>
 			
