@@ -223,25 +223,33 @@ tr:hover {
 }
 }
 
+@media screen and (max-width: 550px) and (min-width: 328px) {
+  #logo {
+    display: none;
+  }
+
+  /* Selector not working */
+  .header {
+    font-size: 1.5 rem;
+    justify-content: center;
+  }
+}
+
 /* Media queries for theView student page */
 
 @media (max-width:  550px) {
-.header-nav{
-  width: calc(90% - 20px);
-  height: calc(10% - 15px);
-
-
-
-}
-#logo{
-  display:none;
-
-}
-
-#logo-tag h1{
-  /* width: calc(10% - 20px); */
-  font-size: 0.75 rem;
+  .header-nav{
+    width: calc(90% - 20px);
+    height: calc(10% - 15px);
   }
+  #logo{
+    display:none;
+
+  }
+
+  #logo-tag h1{
+    font-size: 0.75 rem;
+    }
 }
 
 

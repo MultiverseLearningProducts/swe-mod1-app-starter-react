@@ -23,7 +23,7 @@ export const EnrollStudent = (props) => {
                         <Link to="/enrollStudent">Enroll Students</Link>
                     </h2>
 					<h2 className="nav-item">
-                    <Link to="/login">
+                    <Link to="/">
 						Log Out
                     </Link>
                     
