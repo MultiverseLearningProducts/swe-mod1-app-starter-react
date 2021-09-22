@@ -14,20 +14,17 @@ export const EnrollStudent = (props) => {
 		            <h1>MHAC</h1>
 				</div>
 				<nav className="header-nav">
-					<h2 className="nav-item">
-						{/* <a href="#" className="nav-link">Profile</a> */}
-                    </h2>
                     <h2 className="nav-item">
                     <Link to="/viewStudents">
-                        <a href="#" className="nav-link">View Students</a>
-                        </Link>
+                        View Students
+                    </Link>
                     </h2>
                     <h2 className="nav-item">
-                        <a href="#" className="nav-link">Enroll Students</a>
+                        <Link to="/enrollStudent">Enroll Students</Link>
                     </h2>
 					<h2 className="nav-item">
                     <Link to="/login">
-						<a href="#" className="nav-link">Log Out</a>
+						Log Out
                     </Link>
                     
 
