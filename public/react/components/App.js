@@ -3,6 +3,7 @@ import { ItemContainer } from "./ItemContainer";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Cart from "./Cart";
+import Home from "./Home";
 import {
 	Route,
   Switch
@@ -76,6 +77,9 @@ export const App = () => {
       <div className="App">
           <Navbar></Navbar>
             <Switch>
+                <Route path="/home">
+                  <Home></Home>
+                </Route>
                 <Route path="/plants">
                   <ItemContainer onAdd={onAdd} items={plants} ></ItemContainer>
                 </Route>

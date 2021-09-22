@@ -14,7 +14,7 @@ export default function Navbar() {
       </div>
       <div className="navbar-center" aria-label="home tab">
         <h2 className="nav-item">
-          <a href="#">Plant Shed</a>
+          <Link to="/home">Plant Shed</Link>
         </h2>
       </div>
       <div className="navbar-right" aria-label="cart tab">
