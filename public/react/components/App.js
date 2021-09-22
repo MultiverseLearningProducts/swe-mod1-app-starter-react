@@ -23,7 +23,6 @@ export const App = () => {
     } else {
       setCartItems([...cartItems, { ...product, qty: 1 }]);
     }
-    alert("Successfully Added To Cart!");
   };
 
   const onRemove = (product) => {

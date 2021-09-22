@@ -2,15 +2,19 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
 import Cart from "./Cart";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+
+const StyledBadge = styled(Badge)(() => ({
+  "& .MuiBadge-badge": {
+    right: 22,
+    top: -5,
+    backgroundColor: "#518432",
+    color: "white",
+  },
+}));
 
 export default function CartSideBar(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -21,6 +25,8 @@ export default function CartSideBar(props) {
     bottom: false,
     right: false,
   });
+
+  const cartQty = cartItems.reduce((sum, item) => sum + item.qty, 0);
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -37,7 +43,7 @@ export default function CartSideBar(props) {
     <Box
       sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 350 }}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
@@ -49,7 +55,9 @@ export default function CartSideBar(props) {
       {["right"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Button id="nav-cart-btn" onClick={toggleDrawer(anchor, true)}>
-            <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+            <StyledBadge badgeContent={cartQty}>
+              <ShoppingCartOutlinedIcon></ShoppingCartOutlinedIcon>
+            </StyledBadge>
           </Button>
           <Drawer
             anchor={anchor}

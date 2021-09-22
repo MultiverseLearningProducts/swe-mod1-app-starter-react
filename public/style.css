@@ -156,9 +156,16 @@ body {
 
 .cart-container {
   display: flex;
-  width: 100vw;
+  width: 100%;
   padding: 15px;
   flex-direction: column;
+}
+
+.cart-header-container {
+  display: flex;
+  width: 320px;
+  justify-content: center;
+  text-align: center;
 }
 
 .cart-item-container {
@@ -170,13 +177,14 @@ body {
 
 .cart-item-left {
   display: flex;
-  width: 10%;
-  justify-content: flex-start;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
 }
 
 .cart-item-right {
   display: flex;
-  width: 90%;
+  width: 60%;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -201,13 +209,61 @@ body {
 }
 
 .cart-item-img {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
 }
 
 .cart-item-name {
   font-weight: bold;
   margin: 0px;
+  margin-top: 15px;
+}
+
+.price-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.price-left {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+}
+
+.price-right {
+  display: flex;
+  width: 60%;
+  justify-content: flex-start;
+}
+
+.checkout-container {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#checkout-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#checkout-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#total-price {
+  color: #518432;
+  font-size: large;
 }
 
 /* END CART ------------------------------------------------------------------------- */
@@ -228,7 +284,6 @@ body {
   display: flex;
   width: 33%;
   justify-content: flex-start;
-  
 }
 
 .singleitem-center {
@@ -237,14 +292,12 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-top: 10px;
-  
 }
 
 .singleitem-right {
   display: flex;
   width: 20%;
   justify-content: flex-end;
-  
 }
 
 .single-item {
@@ -264,14 +317,15 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
-  .card-title {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    font-size: 20px;
-  }
+.card-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+}
 
 /*END SINGLE ITEM DISPLAY-----------------------------------*/
 
