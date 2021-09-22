@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 html,
 body {
   margin: 0 auto;
@@ -19,18 +23,21 @@ body {
   display: flex;
   width: 33%;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .navbar-center {
   display: flex;
   width: 33%;
   justify-content: center;
+  align-items: center;
 }
 
 .navbar-right {
   display: flex;
   width: 33%;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-item {
@@ -43,6 +50,15 @@ body {
 }
 
 .nav-item a:hover {
+  color: #518432;
+}
+
+#nav-cart-btn {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-cart-btn:hover {
   color: #518432;
 }
 
@@ -75,7 +91,7 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
@@ -89,7 +105,7 @@ body {
 }
 
 .overlay {
-  transition: .5s ease;
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -105,29 +121,33 @@ body {
   opacity: 0.3;
 }
 
-.hover-container:hover .overlay  {
+.hover-container:hover .overlay {
   opacity: 1;
 }
 
-.cart-btn:hover .cart-icon{
-  color:#518432;
+.cart-btn:hover .cart-icon {
+  color: white;
 }
 
-.cart-btn:hover a{
-  color:#518432;
+.cart-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  transition: 0.5s ease;
 }
 
 .cart-btn {
   background-color: white;
-  border: 2px solid white;
+  border: 2px solid grey;
   border-radius: 50%;
   padding: 20px;
   margin: 10px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .cart-icon {
-  color:black;
+  color: black;
 }
 
 /* END CARDS ------------------------------------------------------------------------- */
@@ -136,10 +156,114 @@ body {
 
 .cart-container {
   display: flex;
-  width: 100vw;
-  border: 1px solid rgb(242, 119, 247);
+  width: 100%;
   padding: 15px;
   flex-direction: column;
+}
+
+.cart-header-container {
+  display: flex;
+  width: 320px;
+  justify-content: center;
+  text-align: center;
+}
+
+.cart-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-left {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-right {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cart-item-buttons {
+  display: block;
+}
+
+.inc-qty,
+.dec-qty {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 1px auto;
+  margin: 5px;
+}
+.inc-qty:hover,
+.dec-qty:hover {
+  background-color: #518432;
+  color: white;
+  border: 1px solid #518432;
+}
+
+.cart-item-img {
+  height: 80px;
+  width: 80px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  margin: 0px;
+  margin-top: 15px;
+}
+
+.price-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.price-left {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+}
+
+.price-right {
+  display: flex;
+  width: 60%;
+  justify-content: flex-start;
+}
+
+.checkout-container {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#checkout-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#checkout-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#total-price {
+  color: #518432;
+  font-size: large;
 }
 
 /* END CART ------------------------------------------------------------------------- */
@@ -160,7 +284,6 @@ body {
   display: flex;
   width: 33%;
   justify-content: flex-start;
-  
 }
 
 .singleitem-center {
@@ -169,14 +292,12 @@ body {
   justify-content: center;
   flex-direction: column;
   padding-top: 10px;
-  
 }
 
 .singleitem-right {
   display: flex;
   width: 20%;
   justify-content: flex-end;
-  
 }
 
 .single-item {
@@ -196,14 +317,15 @@ body {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
-  .card-title {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
-    font-size: 20px;
-  }
+.card-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+}
 
   .item-img {
     border: 2px solid white;
@@ -280,4 +402,3 @@ body {
 }
 
 /* END FOOTER -------------------------------------------------------- */
-
