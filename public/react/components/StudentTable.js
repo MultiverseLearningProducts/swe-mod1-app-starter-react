@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 export const StudentTable = (props) => {
 
-    const [students,setStudents] = useState([])
-    const campuses = ["All", "Moon", "Mars", "Saturn"]
-    const [filter, setFilter] = useState("All")
-    const [allStudents, setAllStudents] = useState([])
+    const [students, setStudents] = useState([]);
+    const campuses = ["All", "Moon", "Mars", "Saturn"];
+    const [filter, setFilter] = useState("All");
+    const [allStudents, setAllStudents] = useState([]);
 
     async function fetchStudents(){
 		try {
@@ -14,33 +13,33 @@ export const StudentTable = (props) => {
 			setStudents(responseJSON);
             setAllStudents(responseJSON);
 		} catch (err) {
-			console.log("Oh no an error! ", err)
+			console.log("Oh no an error! ", err);
 		}
 	}
 
 	useEffect(() => {
-		fetchStudents()
+		fetchStudents();
 	}, []);
 
     function handleChange (e) {
         const newFilter = e.target.value
-        console.log("New filter: ", newFilter)
+        console.log("New filter: ", newFilter);
 
         // update students based on filter
         if (newFilter == "All"){
-            console.log("All students: ", allStudents)
-            setStudents(allStudents)
-            setFilter(newFilter)
-            console.log("Filter: ", filter)
+            console.log("All students: ", allStudents);
+            setStudents(allStudents);
+            setFilter(newFilter);
+            console.log("Filter: ", filter);
         } else {
-            const filteredStudents = allStudents.filter(student => newFilter == student.campus)
-            console.log("filtered students: ", filteredStudents)
-            setStudents(filteredStudents)
-            setFilter(newFilter)
+            const filteredStudents = allStudents.filter(student => newFilter == student.campus);
+            console.log("filtered students: ", filteredStudents);
+            setStudents(filteredStudents);
+            setFilter(newFilter);
         }
     }
 
-    console.log("students in table: ", students)
+    console.log("students in table: ", students);
 
     return (
         <>

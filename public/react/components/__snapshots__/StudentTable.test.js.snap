@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Students Table component renders Student Table component as expected 1`] = `
+Array [
+  <div
+    className="filter-student"
+  >
+    <label
+      htmlFor="campus-select"
+    >
+      Filter Students by Location
+    </label>
+    <br />
+    <select
+      id="campus-select"
+      onChange={[Function]}
+    >
+      <option
+        value="All"
+      >
+        All
+      </option>
+      <option
+        value="Moon"
+      >
+        Moon
+      </option>
+      <option
+        value="Mars"
+      >
+        Mars
+      </option>
+      <option
+        value="Saturn"
+      >
+        Saturn
+      </option>
+    </select>
+  </div>,
+  <div
+    className="table-container"
+  >
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Student ID
+          </th>
+          <th>
+            First Name
+          </th>
+          <th>
+            Last Name
+          </th>
+          <th>
+            Campus
+          </th>
+          <th>
+            Actions
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>,
+]
+`;
