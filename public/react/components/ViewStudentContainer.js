@@ -15,19 +15,19 @@ export const ViewStudentContainer = (props) => {
 				</div>
 				<nav className="header-nav">
                     <h2 className="nav-item">
-		    <Link to="/viewStudents">
-                        <a href="#" className="nav-link">View Students</a>
-			</Link>
+		    			<Link to="/viewStudents" >
+                        	View Students
+						</Link>
 			
                     </h2>
                     <h2 className="nav-item">
-		    <Link to="/enrollStudent">
-                        <a href="#" className="nav-link">Enroll Students</a>
-		    </Link>
+		    			<Link to="/enrollStudent">
+                        	Enroll Students
+		    			</Link>
                     </h2>
 					<h2 className="nav-item">
 					<Link to="/login">
-						<a href="#" className="nav-link">Log Out</a>
+						Log Out
 					</Link>
                     </h2>
                     <img src="https://icons-for-free.com/iconfiles/png/512/avatar+person+profile+user+icon-1320166578424287581.png" className="icon-avatar2" alt="avatar icon"/>

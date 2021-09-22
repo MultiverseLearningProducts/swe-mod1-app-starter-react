@@ -7,7 +7,8 @@ import 'regenerator-runtime/runtime'
 
 
 
-// Unit tessting StudenTable
+
+// Unit testing StudenTable
 
 describe("Students Table component", () => {
   test("Contains items passed down as props", () => {
@@ -19,6 +20,7 @@ describe("Students Table component", () => {
     expect(treeEl.props.students.length).toBe(2)
 
   })
+  
   test("renders Student Table component as expected", () => {
     const studentsList = [{"studentId" : 2, "firstName" : "Ben", "lastName" : "Tate", "campus" : "Mars"}, {"studentId" : 5, "firstName" : "Eric", "lastName" : "Taylor", "campus" : "Mars"}];
 
@@ -28,6 +30,20 @@ describe("Students Table component", () => {
     console.log("What does our snapshot look like?  ", snapshot)
 
     expect(snapshot).toMatchSnapshot();
+
+  })
+
+  test("Invokes function when changed", () => {
+    const studentsList = [{"studentId" : 2, "firstName" : "Ben", "lastName" : "Tate", "campus" : "Mars"}, {"studentId" : 5, "firstName" : "Eric", "lastName" : "Taylor", "campus" : "Mars"}];
+    
+    const stubb = () => "Filter changed";
+
+    const component = renderer.create(<StudentTable students={studentsList} onChange={stubb}/>);
+    const treeEl = component.toTree();
+
+    console.log("What does our snapshot look like?  ", treeEl)
+
+    expect(treeEl.props.onChange()).toBe("Filter changed");
 
   })
 })
