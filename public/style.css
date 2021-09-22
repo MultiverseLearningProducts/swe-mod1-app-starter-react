@@ -73,7 +73,17 @@ align-items: center;
 /* Buttons styling */
 
 button{
+  background-color: rgb(39, 64, 173);
+  color: white;
+  padding: 14px 20px;
+  margin: 5% 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
+button:hover {
+  opacity: 0.8;
 }
 
 
