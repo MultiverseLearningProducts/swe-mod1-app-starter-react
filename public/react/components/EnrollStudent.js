@@ -54,8 +54,8 @@ export const EnrollStudent = (props) => {
                             <option value="Saturn">Saturn</option>
                         </select>
                         <br/>
-                        <button type="">Cancel</button>
-                        <button type="submit">Submit</button>
+                        <button class="cancel-btn" type="">Cancel</button>
+                        <button class="submit-btn" type="submit">Submit</button>
 
                     </form>
                 

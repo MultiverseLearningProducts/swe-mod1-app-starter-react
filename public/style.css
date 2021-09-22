@@ -70,7 +70,30 @@ align-items: center;
   width: 50%;
 }
 
+/* Buttons styling */
 
+button{
+  background-color: rgb(39, 64, 173);
+  color: white;
+  padding: 14px 20px;
+  margin: 5% 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+.submit-btn{
+
+}
+
+.cancel-btn{
+
+}
 
 /* View students page */
 .icon-avatar2{
@@ -101,7 +124,9 @@ th{
 }
 
 
-
+input{
+  padding: 5%
+}
 
 
 

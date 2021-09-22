@@ -26,7 +26,7 @@ export const LoginContainer = (props) => {
                 		<label for="password">Password: </label>
 						<input id="password" placeholder="Password" type="text" required/><br/>
 						<Link to="/viewStudents">
-                		<button type="submit">Login</button>
+                		<button class="login-btn" type="submit">Login</button>
 						</Link>
             		</form>
         		</div>

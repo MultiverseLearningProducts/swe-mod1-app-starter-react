@@ -9,7 +9,7 @@ export const StudentTable = (props) => {
 
     async function fetchStudents(){
 		try {
-			const response = await fetch('http://localhost:3000/sauces');
+			const response = await fetch('http://localhost:4000/sauces');
 			const responseJSON = await response.json();
 			setStudents(responseJSON);
             setAllStudents(responseJSON);
