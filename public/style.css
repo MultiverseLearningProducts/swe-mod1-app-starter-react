@@ -43,6 +43,7 @@ flex-direction: column;
 
 
 }
+
 #logo{
   background-color: cornsilk;
   height: 90% ;
@@ -128,6 +129,13 @@ th{
 input{
   padding: 5%
 }
+
+.input-enroll{
+  border-radius:4px;
+  margin: 1.5%;
+  padding: 1.5%
+}
+
 
 
 
