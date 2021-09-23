@@ -4,9 +4,9 @@
 
 html,
 body {
-  margin: 0 auto;
+  margin: 0;
+  overflow-x: hidden;
 }
-
 
 /* START NAVBAR -------------------------------------------------------- */
 
@@ -14,8 +14,8 @@ body {
   padding-top: 25px;
   display: flex;
   flex-direction: row;
-  width: 90vw;
-  height: 11vh;
+  width: 100%;
+  height: 10vh;
   padding: 15px;
   background-color: white;
   justify-content: center;
@@ -64,9 +64,42 @@ body {
   color: #518432;
 }
 
+#nav-search-icon {
+  color: black;
+}
+
+#nav-search-icon:hover {
+  color: #518432;
+}
 /* END NAVBAR -------------------------------------------------------- */
 
 /* START CARDS ------------------------------------------------------------------------- */
+
+.banner-img {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("./react/components/assets/banner.jpg");
+  /* Set a specific height */
+  height: 30vh;
+  width: 100vw;
+  margin-bottom: 35px;
+  display: flex;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+}
 
 .item-container {
   display: flex;
@@ -263,6 +296,11 @@ body {
   transition: 0.5s ease;
 }
 
+#checkout-btn a {
+  text-decoration: none;
+  color: white;
+}
+
 #total-price {
   color: #518432;
   font-size: large;
@@ -329,65 +367,63 @@ body {
   font-size: 20px;
 }
 
-  .item-img {
-    border: 2px solid white;
-    height: 200px;
-    width: 200px;
-    display: block;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    position:relative;
-    top: -130px;
-  }
+.item-img {
+  border: 2px solid white;
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  position: relative;
+  top: -130px;
+}
 
-  #back-btn  {
-    background-color: black;
-    color: white;
-    border: 2px solid black;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  
-  }
-  #back-btn:hover {
-    background-color: #518432;
-    border: 2px solid #518432;
-    color: white;
-    transition: 0.5s ease;
-  }
-  
+#back-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#back-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
 
-  #add-btn {
-    background-color: black;
-    color: white;
-    border: 2px solid black;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-  #add-btn:hover {
-    background-color: #518432;
-    border: 2px solid #518432;
-    color: white;
-    transition: 0.5s ease;
-  }
-  #description-title {
-    font-weight: 200;
-  }
-  #name-title {
-    font-size: 25px;
-  }
-  
+#add-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#add-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
+#description-title {
+  font-weight: 200;
+}
+#name-title {
+  font-size: 25px;
+}
+
 /*END SINGLE ITEM DISPLAY-----------------------------------*/
 
 /* START FOOTER -------------------------------------------------------- */
@@ -395,7 +431,7 @@ body {
 .footer {
   display: flex;
   flex-direction: row;
-  width: 100vw;
+  width: 100%;
   padding: 15px;
   background-color: #3f3f3f;
   justify-content: center;
@@ -450,7 +486,6 @@ body {
   --widths: 100%;
 }
 
-  
 .slider-container {
   height: var(--heights);
   width: var(--widths);
@@ -477,7 +512,7 @@ body {
   width: 100%;
   height: 905px;
   position: absolute;
-  object-fit:fill;
+  object-fit: fill;
 }
 
 .slide-title,
@@ -550,22 +585,22 @@ body {
 /* END SLIDER -------------------------------------------------------- */
 /* START HOME ITEM -------------------------------------------------------- */
 
-.home-item-p:hover .home-item-right{
-  transition: all .5s linear;
+.home-item-p:hover .home-item-right {
+  transition: all 0.5s linear;
 }
-.home-item-p{
+.home-item-p {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
 }
 
-.home-item-right{
+.home-item-right {
   display: flex;
   width: 60%;
   margin-left: 25px;
   justify-content: flex-start;
 }
 
-.home-item-left{
+.home-item-left {
   display: flex;
   width: 50%;
   padding-left: 40px;
@@ -575,4 +610,37 @@ body {
 }
 
 /* END HOME ITEM -------------------------------------------------------- */
-/*
+
+/*PAYMENT FORM ---------------------------------------------------*/
+input[type=text], select ,input[type=password] ,textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.paymentContainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.payment-center {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
