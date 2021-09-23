@@ -6,15 +6,17 @@ export const ItemContainer = (props) => {
   const { onAdd } = props; // props.onAdd
 
   return (
-    <div className="item-container">
-      <div class="banner-img">
-        <div class="banner-text">
+    <>
+      <div className="banner-img">
+        <div className="banner-text">
           <h1>Products</h1>
         </div>
       </div>
-      {props.items.map((item, idx) => {
-        return <Item onAdd={onAdd} item={item} key={idx} />;
-      })}
-    </div>
+      <div className="item-container">
+        {props.items.map((item, idx) => {
+          return <Item onAdd={onAdd} item={item} key={idx} />;
+        })}
+      </div>
+    </>
   );
 };
