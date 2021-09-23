@@ -10,12 +10,10 @@ export default function Home() {
         <div className="home-page">
          <Slider/>
         </div>
-            <br/>
-            <br/>
-            <br/>
         <div>
          <HomeItem/>
         </div>
+        <br/>
     </div>                                      
     );
 }
