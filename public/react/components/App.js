@@ -72,10 +72,6 @@ export const App = () => {
       <Navbar cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Navbar>
 
       <Switch>
-        <Route path="/home">
-          <Home></Home>
-        </Route>
-
         <Route path="/plants">
           <ItemContainer onAdd={onAdd} items={plants}></ItemContainer>
         </Route>
@@ -91,6 +87,9 @@ export const App = () => {
         </Route>
         <Route path="/form">
           <PaymentForm></PaymentForm>
+        </Route>
+        <Route path="/">
+          <Home></Home>
         </Route>
       </Switch>
       <Footer></Footer>
