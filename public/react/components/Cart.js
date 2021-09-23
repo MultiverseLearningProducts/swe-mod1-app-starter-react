@@ -1,5 +1,6 @@
 import React from "react";
 import Divider from "@mui/material/Divider";
+import { Link } from "react-router-dom";
 
 export default function Cart(props) {
   const { cartItems, onAdd, onRemove } = props;
@@ -84,9 +85,9 @@ export default function Cart(props) {
             <button
               id="checkout-btn"
               aria-label="checkout"
-              onClick={() => alert("Implement Checkout")}
             >
-              CHECKOUT
+            <Link to="/form">CHECKOUT</Link>
+
             </button>
           </div>
         </>

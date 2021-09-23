@@ -6,6 +6,7 @@ import Cart from "./Cart";
 import { Route, Switch } from "react-router-dom";
 import  Home  from "./Home";
 import SingleItemContainer from "./SingleItemContainer";
+import PaymentForm from "./PaymentForm";
 
 export const App = () => {
   const [products, setProducts] = useState([]);
@@ -87,6 +88,9 @@ export const App = () => {
                 </Route>
                 <Route path="/coffee/:id">
                   <SingleItemContainer onAdd={onAdd} ></SingleItemContainer>
+                </Route>
+                <Route path="/form">
+                  <PaymentForm  ></PaymentForm>
                 </Route>
               </Switch>       
           <Footer></Footer>
