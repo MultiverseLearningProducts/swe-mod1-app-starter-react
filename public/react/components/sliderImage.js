@@ -2,6 +2,8 @@ import First from "./assets/First.jpg";
 import Second from "./assets/Second.jpg";
 import Seventh from "./assets/Seventh.jpg";
 import Sixth from "./assets/Sixth.jpg";
+import Eighth from "./assets/Eighth.jpg";
+import Tenth from "./assets/Tenth.jpg";
 
 export default [
   {
@@ -23,5 +25,15 @@ export default [
     title: "Products",
     description: "Check out our coffee variety.",
     urls: Sixth,
+  },
+  {
+    title: "Products",
+    description: "Check out our coffee variety.",
+    urls: Eighth,
+  },
+  {
+    title: "Products",
+    description: "Check out our coffee variety.",
+    urls: Tenth,
   },
 ];
