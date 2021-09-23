@@ -9,6 +9,8 @@ body {
   margin: 0px;
   padding: 0px;
   opacity:0.7;
+  font-family: sans-serif;
+
   
 }
 .container {
@@ -45,11 +47,15 @@ flex-direction: column;
 }
 
 #logo{
+  border-radius: 40px;
   background-color: cornsilk;
   height: 90% ;
   padding: 0%;
   margin: 0%;
   float: left;
+  opacity: 0.6;
+
+
 }
 
 #logo-tag{
@@ -74,6 +80,26 @@ align-items: center;
 
 /* Buttons styling */
 
+.login-input{
+  border: none;
+  border-radius: 4px;
+  padding: 5%;
+  margin: 5%
+
+}
+
+.login-btn{
+  background-color: rgb(39, 64, 173);
+  color: white;
+  padding: 14px 15px;
+  margin: 5% 0;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+
+}
+
 button{
   background-color: rgb(39, 64, 173);
   color: white;
@@ -81,7 +107,7 @@ button{
   margin: 5% 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  
 }
 
 button:hover {
@@ -165,6 +191,11 @@ color: white;
   color: white;
 }
 
+.header-h1{
+  margin-left: 5%;
+  font-size: 1.7rem;
+}
+
 .table-link{
   color: white;
 }
@@ -219,6 +250,28 @@ flex-direction: column;
 
 tr:hover {
   background-color: #D6EEEE;
+}
+
+.enroll-btn{
+  text-align: center;
+  background-color: rgb(39, 64, 173);
+  color: white;
+  padding: 1% 2%;
+  margin: 5% 5%;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.input-enroll{
+  padding: 1.5%;
+  margin: .5%;
+  border-radius:4px;
+
+}
+
+a{
+  text-decoration: none;
 }
 
 
