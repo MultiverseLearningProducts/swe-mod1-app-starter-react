@@ -12,10 +12,12 @@ export default function PaymentForm() {
         payment: ""
 
         });
+        
 
     const [message,setMessage]=useState('');
     
     function handleChange(e) {
+         // Use spread operator to clone previous state, but replace with new values
         setInput({
             ...input,
             [e.target.name]: e.target.value,
