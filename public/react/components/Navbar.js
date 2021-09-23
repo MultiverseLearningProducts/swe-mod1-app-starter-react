@@ -11,7 +11,7 @@ export default function Navbar(props) {
     <nav className="navbar">
       <section className="navbar-left" aria-label="shopping tabs">
         <h3 className="nav-item">
-          <Link to="/home">Home</Link>
+          <Link to="/">Home</Link>
         </h3>
         <h3 className="nav-item">
           <Link to="/plants">Plants</Link>
