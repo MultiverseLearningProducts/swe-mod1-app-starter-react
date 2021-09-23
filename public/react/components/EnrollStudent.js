@@ -4,7 +4,35 @@ import {Route, Link
 
 export const EnrollStudent = (props) => {
     
+    const [student, setStudent] = useState({firstName : '', lastName : '', campus : ''});
+    const [message, setMessage] = useState('')
+    
 
+    function handleFirst(e){
+        const newStudent = student;
+        newStudent.firstName = e.target.value;
+        setStudent(newStudent);
+        console.log("New student: ", student);
+    }
+
+    function handleLast(e){
+        const newStudent = student;
+        newStudent.lastName = e.target.value;
+        setStudent(newStudent);
+        console.log("New student: ", student);
+    }
+
+    function handleCampus(e){
+        const newStudent = student;
+        newStudent.campus = e.target.value;
+        setStudent(newStudent);
+        console.log("New student: ", student);
+    }
+
+    function handleSubmit(e){
+        e.preventDefault()
+        setMessage(`Student ${student.firstName} ${student.lastName} enrolled at ${student.campus} Campus`)
+    }
 
     return (
         <div className="container">
@@ -37,24 +65,33 @@ export const EnrollStudent = (props) => {
                     <h2>Student Registration Form</h2>
                 </div>
                 <div>
-                    <form action="">
-                        <label htmlFor="first-name">Student First Name: </label>
-                        <input id="first-name" placeholder="First Name" type="text" required />
-                        <br/>
-                        <label htmlFor="last-name">Student Last Name: </label>
-                        <input id="last-name" placeholder="Last Name" type="text" required />
-                        <br/>
-                        <label htmlFor="campus">Location</label>
-                        <select name="campus" id="campus" multiple>
-                            <option value="Mars">Mars</option>
-                            <option value="Moon">Moon</option>
-                            <option value="Saturn">Saturn</option>
-                        </select>
-                        <br/>
-                        <button class="cancel-btn" type="">Cancel</button>
-                        <button class="submit-btn" type="submit">Submit</button>
-
-                    </form>
+                    {
+                        message ? (
+                            <div>
+                                <h2 className="enroll-msg">{message}</h2>
+                                <Link to="/viewStudents">
+						            Go To Students Page
+					            </Link>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit} >
+                                <input id="first-name" className="input-enroll" placeholder="First Name" type="text" onChange={handleFirst} required />
+                                <br/>
+                                <input id="last-name" className="input-enroll" placeholder="Last Name" type="text" onChange={handleLast} required />
+                                <br/>
+                                <label htmlFor="campus">Location</label>
+                                <select name="campus" id="campus" onChange={handleCampus} multiple>
+                                    <option value="Mars">Mars</option>
+                                    <option value="Moon">Moon</option>
+                                    <option value="Saturn">Saturn</option>
+                                </select>
+                                <br/>
+                                <button className="submit-btn" type="submit">Submit</button>
+                                <button className="cancel-btn" type="">Cancel</button>
+                            </form>
+                        )
+                    }
+                    
                 
                 </div>
             </div>
