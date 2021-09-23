@@ -37,36 +37,38 @@ export default function PaymentForm() {
 				message ? message : (
 					<form onSubmit={handleSubmit}>
 						<div>
-							<label for="fname">First Name: </label>
-                            <input type="text" id="fname" name="fname" value={input.fname} onChange={handleChange} />
+							<label for="fname">First Name: </label> 
+                            <input type="text" id="fname" name="fname" value={input.fname} onChange={handleChange} placeholder="Enter first name" /> <br/>
 						</div>
 
                         <div>
-                        <label for="lname">Last Name: </label>
-							<input type="text" name="lname" value={input.lname} onChange={handleChange} />
+                            <label for="lname">Last Name: </label>
+						    <input type="text" name="lname" value={input.lname} onChange={handleChange} placeholder="Enter last name" /> <br/>
                         </div>
                         <div>
-                        <label for="email">Email: </label>
-							<input type="text" name="email" value={input.email} onChange={handleChange} />
-                        </div>
-
-                        <div>
-                        <label for="password">Password: </label>
-							<input type="password" name="password" value={input.password} onChange={handleChange} />
+                            <label for="email">Email: </label> 
+						    <input type="text" name="email" value={input.email} onChange={handleChange} placeholder="Enter email" /> <br/>
                         </div>
 
                         <div>
-                        <label for="address">Shipping Address: </label>
-							<input type="text" name="address" value={input.address} onChange={handleChange} />
+                            <label for="password">Password: </label> 
+							<input type="password" name="password" value={input.password} onChange={handleChange} placeholder="Enter password" /> <br/>
                         </div>
 
                         <div>
-                        <label for="cardNumber">Credit Card Number: </label>
-							<input type="text" name="cardNumber" value={input.card} onChange={handleChange} />
+                            <label for="address">Shipping Address: </label> 
+							<textarea id="address" rows="4" cols="20" name="address"  value={input.address} onChange={handleChange}> </textarea> <br/>
+                        
+                        </div>
+
+                        <div>
+                            <label for="cardNumber">Credit Card Number: </label> <br/>
+							<input type="text" name="cardNumber" value={input.card} onChange={handleChange} /> <br/>
 
                         </div>
 						<div>
 							<label for="payment">Payment Type: </label>
+                            
 							<select id="payment" name="payment" onChange={handleChange}>
 								<option></option>
 								<option value="visa" >Visa</option>
@@ -74,7 +76,10 @@ export default function PaymentForm() {
 								<option vlaue="chase">Chase</option>
 							</select>
 						</div>
+
+                        <div>
 						<button type="submit" className="btn">Submit Order</button>
+                        </div>
 					</form>
 				)
 			}
