@@ -24,8 +24,9 @@ display:  flex;
 flex-direction: row;
 width:  100vw;
 height: 15vh; 
-color:  cornflowerblue;
+color:  white;
 background-size: cover;
+background-position: center 50%;
 }
 
 .header-info {
