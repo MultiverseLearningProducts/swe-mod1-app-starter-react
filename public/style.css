@@ -79,7 +79,7 @@ body {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: url("./react/components/assets/banner.jpg");
   /* Set a specific height */
-  height: 40vh;
+  height: 30vh;
   width: 100vw;
   margin-bottom: 35px;
   display: flex;
@@ -96,7 +96,7 @@ body {
   text-align: center;
   position: absolute;
   top: 50%;
-  left: 51%;
+  left: 50%;
   transform: translate(-50%, -50%);
   color: green;
 }

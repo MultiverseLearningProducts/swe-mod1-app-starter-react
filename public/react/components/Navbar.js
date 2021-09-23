@@ -10,12 +10,18 @@ export default function Navbar(props) {
   return (
     <nav className="navbar">
       <section className="navbar-left" aria-label="shopping tabs">
-        <h2 className="nav-item">
+        <h3 className="nav-item">
+          <Link to="/home">Home</Link>
+        </h3>
+        <h3 className="nav-item">
           <Link to="/plants">Plants</Link>
-        </h2>
-        <h2 className="nav-item">
-          <Link to="/coffees">Coffee-Beans</Link>
-        </h2>
+        </h3>
+        <h3 className="nav-item">
+          <Link to="/coffees">Coffee Beans</Link>
+        </h3>
+        <h3 className="nav-item">
+          <Link to="/about">Our Story</Link>
+        </h3>
       </section>
       <section className="navbar-center" aria-label="home tab">
         <h2 className="nav-item">
@@ -23,6 +29,9 @@ export default function Navbar(props) {
         </h2>
       </section>
       <section className="navbar-right" aria-label="cart tab">
+        <h3 className="nav-item">
+          <Link to="/about">Log In</Link>
+        </h3>
         <h2 className="nav-item">
           <CartSideBar
             cartItems={cartItems}

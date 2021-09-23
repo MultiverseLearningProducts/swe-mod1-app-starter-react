@@ -70,7 +70,7 @@ export const App = () => {
   return (
     <div className="App">
       <Navbar cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Navbar>
-      
+
       <Switch>
         <Route path="/home">
           <Home></Home>
