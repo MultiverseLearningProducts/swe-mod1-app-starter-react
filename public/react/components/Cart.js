@@ -86,7 +86,7 @@ export default function Cart(props) {
               id="checkout-btn"
               aria-label="checkout"
             >
-            <Link to="/form">CHECKOUT</Link>
+            <Link to="/form">PROCEED TO CHECKOUT</Link>
 
             </button>
           </div>

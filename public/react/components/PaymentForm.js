@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { validate } from "@babel/types";
+import { Link } from "react-router-dom";
 
 export default function PaymentForm() {
   const [input, setInput] = useState({
@@ -7,6 +7,10 @@ export default function PaymentForm() {
     email: "",
     password: "",
     address: "",
+    apartment:"",
+    city:"",
+    zipcode:"",
+    ccv:"",
     cardNumber: "",
     payment: "",
 
@@ -28,79 +32,111 @@ export default function PaymentForm() {
   function handleSubmit(e) {
     e.preventDefault(); 
     // prevents refresh in all browsers
-    alert( `Payment Submitted ${input.fname} #${input.cardNumber}`)
+    alert( `Enjoy your Purchase:) Payment Submitted ${input.fname} #${input.cardNumber}`)
 
     setMessage(
       `Payment Submitted ${input.fname} ,#${input.cardNumber}`
     );
   }
 
-  
-
   return (
-    <div>
+    <div className="form-container">
        {message ? ( message) : (
-   
+    
         <form onSubmit={handleSubmit}>
          <h1 id="heading">Payment Checkout Form</h1>
          <div className="paymentContainer">
           <div className="payment-center">
 
-          <div>
-            <label for="fname">Full Name: </label>
-            <input
-              type="text"
-              id="fname"
-              name="fname"
-              value={input.fname}
-              onChange={handleChange}
-              placeholder="Enter name" required
-            />
-          </div> <br/>
 
           <div>
-            <label for="email">Email: </label>
-            <input
+            <label for="email">Contact Information: </label>
+            <input className="box"
               type="text"
               name="email"
               value={input.email}
               onChange={handleChange}
-              placeholder="Enter email"required
+              placeholder="Email or mobile phone number"required
             />
           </div> <br/>
 
           <div>
             <label for="password">Password: </label>
-            <input
+            <input className="box"
               type="password"
               name="password"
               value={input.password}
               onChange={handleChange}
-              placeholder="Enter password" required
+              placeholder="Password" required
             />
           </div> <br/>
 
             <div>
               <label for="address">Shipping Address: </label> 
-              <textarea
-               id="address" 
-             rows="4" cols="20" 
-             name="address"  
-             value={input.address} 
-             onChange={handleChange}
-             placeholder="Enter address" required>
-              </textarea>
-             
-                        
-         </div> <br/>
+              <input
+               className="box"
+              type="text"
+              id="fname"
+              name="fname"
+              value={input.fname}
+              onChange={handleChange}
+              placeholder="Full name" required
+            />
+              <input
+              className="box"
+              type="text"
+              id="address"
+              name="address"
+              value={input.address}
+              onChange={handleChange}
+              placeholder="Address,apartment,suite" required
+            />
+           
 
-            <div>
-                <label for="cardNumber">Credit Card Number: </label> 
-                <input type="text"
+            <div className="address-details">
+           
+            <select id="city" name="city" placeholder="select city" onChange={handleChange}>
+				<option>Select City</option>
+				<option value="chicago" >Chicago</option>
+				<option value="newyork">New York</option>
+				<option vlaue="dallas">Dallas</option>
+				</select>
+                </div>
+
+                <div className="address-details">
+                <input
+                className="box2"
+              type="text"
+              id="zipcode"
+              name="zipcode"
+              value={input.zipcode}
+              onChange={handleChange}
+              placeholder="Zipcode" required
+            />
+             </div>
+             </div>         
+         <br/>
+
+            <div className="card-details">
+                <label for="cardNumber">Credit Card Details: </label> 
+                <input 
+                className="box2"
+                type="text"
                  name="cardNumber" 
                 value={input.card} 
                 onChange={handleChange}
-                placeholder="Enter card number" required /> 
+                placeholder="Card number" required /> 
+                </div>
+
+                <div className="card-details">
+
+                <input
+                className="box2"
+                 type="text"
+                 name="ccv" 
+                value={input.ccv} 
+                onChange={handleChange}
+                placeholder="CCV" required /> 
             </div> <br/>
 
 			<div>
@@ -116,13 +152,16 @@ export default function PaymentForm() {
 
             <div>
 			    <button type="submit" className="btn">Submit Order</button>
-                {/* <Button id="back-btn1" component={Link} 
-               to={'/cart'}>Back </Button> */}
+                <button className="btn">
+                <Link to="/cart">Return to Cart</Link></button>
+                
             </div>
             
         </div>
-    </div>
+        </div>
+    
 </form> 
+
 
 
         )}

@@ -88,6 +88,9 @@ export const App = () => {
         <Route path="/form">
           <PaymentForm></PaymentForm>
         </Route>
+        <Route path="/cart">
+          <Cart></Cart>
+        </Route>
         <Route path="/">
           <Home></Home>
         </Route>
