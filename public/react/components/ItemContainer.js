@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Item } from "./Item";
-import banner from "./assets/banner.jpg";
 
 export const ItemContainer = (props) => {
   const { onAdd } = props; // props.onAdd

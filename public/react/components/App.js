@@ -9,7 +9,6 @@ import SingleItemContainer from "./SingleItemContainer";
 import PaymentForm from "./PaymentForm";
 
 export const App = () => {
-  const [products, setProducts] = useState([]);
   const [cartItems, setCartItems] = useState([]);
   const [plants, setPlants] = useState([]);
   const [coffees, setCoffees] = useState([]);
