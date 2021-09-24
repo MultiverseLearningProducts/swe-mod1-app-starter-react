@@ -1,34 +1,767 @@
-#header{
-  color:  steelblue;
-  font-size:  32px;
-  font-family:  fantasy, sans-serif;
-  text-shadow: 2px 2px fuchsia;
+* {
+  font-family: sans-serif;
+
+
 }
 
-#header:hover{
-  color: palegoldenrod;
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+
 }
 
-#header-small {
-  font-size:  16px;
-  color:  peru;
-  text-shadow:  1px darkmagenta;
-  transition: transform .3s;
+/* START NAVBAR -------------------------------------------------------- */
+
+.navbar {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10vh;
+  padding: 15px;
+  background-color: white;
+  justify-content: center;
 }
 
-#header-small:hover {
-  transform: translateY(-10px);
+.navbar-left {
+  display: flex;
+  width: 33%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-center {
+  display: flex;
+  width: 33%;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  width: 33%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 10px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item a:hover {
+  color: #518432;
+}
+
+#nav-cart-btn {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-cart-btn:hover {
+  color: #518432;
+}
+
+#nav-search-icon {
+  color: black;
+}
+
+#nav-search-icon:hover {
+  color: #518432;
+}
+/* END NAVBAR -------------------------------------------------------- */
+
+/* START CARDS ------------------------------------------------------------------------- */
+
+.banner-img {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: url("./react/components/assets/banner.jpg");
+  /* Set a specific height */
+  height: 30vh;
+  width: 100vw;
+  margin-bottom: 35px;
+  display: flex;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.banner-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: green;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+}
+
+.card {
+  flex: 0 1 30%;
+  margin-bottom: 2em;
+}
+
+.card-img {
+  border: 2px solid white;
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.card-name,
+.card-price {
+  text-align: center;
+}
+
+.hover-container {
+  position: relative;
+}
+
+.overlay {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.hover-container:hover .card-img {
+  opacity: 0.3;
+}
+
+.hover-container:hover .overlay {
+  opacity: 1;
+}
+
+.cart-btn:hover .cart-icon {
+  color: white;
+}
+
+.cart-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  transition: 0.5s ease;
+}
+
+.cart-btn {
+  background-color: white;
+  border: 2px solid grey;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-icon {
+  color: black;
+}
+
+/* END CARDS ------------------------------------------------------------------------- */
+
+/* START CART ------------------------------------------------------------------------- */
+
+.cart-container {
+  display: flex;
+  width: 100%;
+  padding: 15px;
+  flex-direction: column;
+}
+
+.cart-header-container {
+  display: flex;
+  width: 320px;
+  justify-content: center;
+  text-align: center;
+}
+
+.cart-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-left {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-item-right {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cart-item-buttons {
+  display: block;
+}
+
+.inc-qty,
+.dec-qty {
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  padding: 1px auto;
+  margin: 5px;
+}
+.inc-qty:hover,
+.dec-qty:hover {
+  background-color: #518432;
+  color: white;
+  border: 1px solid #518432;
+}
+
+.cart-item-img {
+  height: 80px;
+  width: 80px;
+}
+
+.cart-item-name {
+  font-weight: bold;
+  margin: 0px;
+  margin-top: 15px;
+}
+
+.price-row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.price-left {
+  display: flex;
+  width: 40%;
+  justify-content: flex-start;
+}
+
+.price-right {
+  display: flex;
+  width: 60%;
+  justify-content: flex-start;
+}
+
+.checkout-container {
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#checkout-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#checkout-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#checkout-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+#total-price {
+  color: #518432;
+  font-size: large;
+}
+
+/* END CART ------------------------------------------------------------------------- */
+
+/* SINGLE ITEM DISPLAY ----------------------------------------------------------*/
+
+.single-item-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  padding: 15px;
+  background-color: white;
+  border-bottom: 4px solid #e5e4e2;
+  justify-content: center;
+}
+
+.singleitem-left {
+  display: flex;
+  width: 33%;
+  justify-content: flex-start;
+}
+
+.singleitem-center {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.singleitem-right {
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+}
+
+.single-item {
+  margin: 10px;
+}
+
+.singleItem-img {
+  border: 2px solid white;
+  height: 700px;
+  width: 600px;
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+
+.card-title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
 }
 
 .item-img {
-  width: 225px;
-  padding: 0 10px;
-  float: left;
-  height: 225px;
-  background-repeat: no-repeat;
-  background-size: 225px;
+  border: 2px solid white;
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+  position: relative;
+  top: -130px;
 }
 
-* {
-  background-color:  papayawhip;
+#back-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
+#back-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
+
+#add-btn {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#add-btn:hover {
+  background-color: #518432;
+  border: 2px solid #518432;
+  color: white;
+  transition: 0.5s ease;
+}
+#description-title {
+  font-weight: 200;
+}
+#name-title {
+  font-size: 25px;
+}
+
+/*END SINGLE ITEM DISPLAY-----------------------------------*/
+
+/* START FOOTER -------------------------------------------------------- */
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 15px;
+  background-color: #3f3f3f;
+  justify-content: center;
+  color: white;
+}
+
+.footer-left {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+}
+
+.footer-center {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.footer-right {
+  display: flex;
+  width: 25%;
+  justify-content: center;
+}
+
+.footer-item {
+  margin: 10px;
+}
+
+.footer-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-item li {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.footer-item ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-item a:hover {
+  color: #518432;
+}
+
+/* END FOOTER -------------------------------------------------------- */
+/* BEGIN SLIDER -------------------------------------------------------- */
+:root {
+  --heights: 56rem;
+  --widths: 100%;
+}
+
+.slider-container {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-bottom: 10px solid white;
+}
+
+.active {
+  display: inline-block;
+}
+
+.inactive {
+  display: none;
+}
+
+.slides {
+  height: var(--heights);
+  width: var(--widths);
+  position: relative;
+}
+
+.slide-image {
+  width: 100%;
+  height: 905px;
+  position: absolute;
+  object-fit: cover;
+}
+
+.slide-title,
+.slide-text {
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  z-index: 10;
+}
+
+.slide-text {
+  top: 65%;
+  font-size: 2rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -3rem;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.prev:hover,
+.next:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease-in;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.all-dots {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  top: 85%;
+  justify-content: center;
+  z-index: 200;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0px 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.active-dot,
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* END SLIDER -------------------------------------------------------- */
+/* START HOME ITEM -------------------------------------------------------- */
+
+.home-item-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+.home-item-p2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100vw;
+}
+.home-item-left {
+  justify-content: left;
+}
+#plant1 {
+  width: 98%;
+}
+#plant2 {
+  width: 98%;
+}
+#coffee1 {
+  width: 98%;
+  height: 99%;
+  border-top: 7px solid white;
+}
+#coffee2 {
+  width: 98%;
+  border-top: 7px solid white;
+}
+.home-item-row {
+  width: 95%;
+}
+
+.home-item-right {
+  display: flex;
+  justify-content: flex-start;
+  width: 95%;
+}
+
+.home-item-left {
+  display: flex;
+  width: 50%;
+  padding-left: 40px;
+  margin-right: 35px;
+  margin-left: 0;
+  justify-content: flex-end;
+  width: 95%;
+}
+
+/* END HOME ITEM -------------------------------------------------------- */
+
+/*PAYMENT FORM ---------------------------------------------------*/
+
+input[type=text]  {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password] ,textarea , select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  .paymentContainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px; 
+} 
+
+
+#heading {
+  color: #45a049;
+  text-align: center;
+
+ }
+ 
+/* .payment-center ,#heading{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left:700px;
+  flex: 25%;
+  
+}  */
+
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.btn  {
+  background-color:black;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 50%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius:15px;
+  
+}
+
+.btn:hover  {
+  background-color: #45a049;
+}
+.return-cart-btn a {
+  text-decoration: none;
+  color:white;
+ 
+}
+
+form{
+  width: 600px;
+  justify-content: center;
+  margin:100px,auto,0,auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 grey 0 4px 8px 0 grey;
+
+
+}
+.box{
+  width: 100%;
+  padding:10px;
+  border:none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin:10px 0 15px 0;
+
+
+}
+.card-details ,.address-details {
+  display: inline-block;
+
+}
+.box2 ,#city {
+  padding: 12px;
+  border:none;
+  border-radius:15px;
+  margin:10px 0 25px 0;
+ 
+}
+.form-container {
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+
+
+/*END PAYMENT FORM------------------------------------------------------------------------*/
+
+
