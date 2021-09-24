@@ -1,11 +1,14 @@
 * {
   font-family: sans-serif;
+
+
 }
 
 html,
 body {
   margin: 0;
   overflow-x: hidden;
+
 }
 
 /* START NAVBAR -------------------------------------------------------- */
@@ -637,3 +640,128 @@ body {
 }
 
 /* END HOME ITEM -------------------------------------------------------- */
+
+/*PAYMENT FORM ---------------------------------------------------*/
+
+input[type=text]  {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password] ,textarea , select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+  .paymentContainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px; 
+} 
+
+
+#heading {
+  color: #45a049;
+  text-align: center;
+
+ }
+ 
+/* .payment-center ,#heading{
+  display: flex;
+  width: 20%;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left:700px;
+  flex: 25%;
+  
+}  */
+
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.btn  {
+  background-color:black;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 50%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius:15px;
+  
+}
+
+.btn:hover  {
+  background-color: #45a049;
+}
+.return-cart-btn a {
+  text-decoration: none;
+  color:white;
+ 
+}
+
+form{
+  width: 600px;
+  justify-content: center;
+  margin:100px,auto,0,auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 grey 0 4px 8px 0 grey;
+
+
+}
+.box{
+  width: 100%;
+  padding:10px;
+  border:none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin:10px 0 15px 0;
+
+
+}
+.card-details ,.address-details {
+  display: inline-block;
+
+}
+.box2 ,#city {
+  padding: 12px;
+  border:none;
+  border-radius:15px;
+  margin:10px 0 25px 0;
+ 
+}
+.form-container {
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+
+
+/*END PAYMENT FORM------------------------------------------------------------------------*/
+
+
