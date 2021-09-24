@@ -89,7 +89,7 @@ export const App = () => {
           <PaymentForm></PaymentForm>
         </Route>
         <Route path="/cart">
-          <Cart></Cart>
+        <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>
         </Route>
         <Route path="/">
           <Home></Home>
