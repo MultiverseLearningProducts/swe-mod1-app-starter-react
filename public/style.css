@@ -639,7 +639,18 @@ body {
 /* END HOME ITEM -------------------------------------------------------- */
 
 /*PAYMENT FORM ---------------------------------------------------*/
-input[type=text], select ,input[type=password] ,textarea {
+
+input[type=text]  {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password] ,textarea , select{
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -648,26 +659,61 @@ input[type=text], select ,input[type=password] ,textarea {
   border-radius: 4px;
   box-sizing: border-box;
 }
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 .paymentContainer {
   border-radius: 5px;
   background-color: #f2f2f2;
+  
   padding: 20px;
+
+
 }
-.payment-center {
+#heading {
+  color: #45a049;
+
+}
+.payment-center ,#heading{
   display: flex;
   width: 20%;
   justify-content: center;
   flex-direction: column;
   padding-top: 10px;
+  padding-left:700px;
+  flex: 25%;
+  
 }
+
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+
+.btn  {
+  background-color:black;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover  {
+  background-color: #45a049;
+}
+
+/*END PAYMENT FORM------------------------------------------------------------------------*/
+
 
