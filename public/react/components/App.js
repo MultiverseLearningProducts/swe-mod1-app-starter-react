@@ -7,9 +7,11 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import SingleItemContainer from "./SingleItemContainer";
 import PaymentForm from "./PaymentForm";
+import { FavoritesContainer } from "./FavoritesContainer";
 
 export const App = () => {
   const [cartItems, setCartItems] = useState([]);
+  const [favItems, setFavItems] = useState([]);
   const [plants, setPlants] = useState([]);
   const [coffees, setCoffees] = useState([]);
 
@@ -37,6 +39,16 @@ export const App = () => {
           x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
         )
       );
+    }
+  };
+
+  // Function to favorite products
+  const onFav = (product) => {
+    const exist = favItems.find((x) => x.id === product.id);
+    if (exist) {
+      setFavItems([...favItems]);
+    } else {
+      setFavItems([...favItems, { ...product }]);
     }
   };
 
@@ -72,11 +84,25 @@ export const App = () => {
 
       <Switch>
         <Route path="/plants">
-          <ItemContainer onAdd={onAdd} items={plants}></ItemContainer>
+          <ItemContainer
+            onAdd={onAdd}
+            onFav={onFav}
+            items={plants}
+          ></ItemContainer>
         </Route>
-
         <Route path="/coffees">
-          <ItemContainer onAdd={onAdd} items={coffees}></ItemContainer>
+          <ItemContainer
+            onAdd={onAdd}
+            onFav={onFav}
+            items={coffees}
+          ></ItemContainer>
+        </Route>
+        <Route path="/favorites">
+          <FavoritesContainer
+            onAdd={onAdd}
+            onFav={onFav}
+            favItems={favItems}
+          ></FavoritesContainer>
         </Route>
         <Route path="/plant/:id">
           <SingleItemContainer onAdd={onAdd}></SingleItemContainer>
@@ -85,7 +111,10 @@ export const App = () => {
           <SingleItemContainer onAdd={onAdd}></SingleItemContainer>
         </Route>
         <Route path="/form">
-          <PaymentForm cartItems={cartItems} setCartItems={setCartItems}></PaymentForm>
+          <PaymentForm
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          ></PaymentForm>
         </Route>
         <Route path="/cart">
           <Cart cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}></Cart>

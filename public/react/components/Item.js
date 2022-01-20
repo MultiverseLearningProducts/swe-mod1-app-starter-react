@@ -6,7 +6,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { Link } from "react-router-dom";
 
 export const Item = (props) => {
-  const { onAdd } = props;
+  const { onAdd, onFav } = props;
 
   return (
     <div className="card">
@@ -19,13 +19,13 @@ export const Item = (props) => {
         <div className="overlay">
           <button
             className="cart-btn"
-            aria-label="Favorite"
-            onClick={() => onAdd(props.item)}
+            aria-label="Favorite This Item"
+            onClick={() => onFav(props.item)}
           >
             <FavoriteBorderIcon className="cart-icon"></FavoriteBorderIcon>
           </button>
-          <Link 
-            to={`plant/${props.item.id}`} 
+          <Link
+            to={`plant/${props.item.id}`}
             aria-label="View More Details"
             className="cart-btn"
           >
@@ -43,8 +43,6 @@ export const Item = (props) => {
 
       <h3 className="card-name">{props.item.name} </h3>
       <h3 className="card-price">$ {props.item.price}</h3>
-  
-
     </div>
   );
 };
