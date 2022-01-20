@@ -20,6 +20,9 @@ export default function Navbar(props) {
           <Link to="/coffees">Coffee Beans</Link>
         </h3>
         <h3 className="nav-item">
+          <Link to="/favorites">Favorites</Link>
+        </h3>
+        <h3 className="nav-item">
           <Link to="/about">Our Story</Link>
         </h3>
       </section>
