@@ -50,21 +50,21 @@ continuous integration, version and source control
 ---
 
 ## Screenshots
-![5.png](./images/pic10.jpg)
+![5.png](pic10.jpg)
 
-![1.png](./images/pic4.png)
+![1.png](pic4.png)
 
-![2.png](./images/pic3.png)
+![2.png](pic3.png)
 
-![4.png](./images/pic7.png)
+![4.png](pic7.png)
 
-![3.png](./images/pic2.png)
+![3.png](pic2.png)
 
-![4.png](./images/pic5.png)
+![4.png](pic5.png)
 
-![3.png](./images/pic6.png)
+![3.png](pic6.png)
 
-![4.png](./images/pic7.png)
+![4.png](pic7.png)
 
 ---
 
