@@ -44,27 +44,55 @@ continuous integration, version and source control
 
 ## Demo 
 
-![Demo](./demo.gif)
+<h1 align="center">
+   Plantshed |E-commerce Application.
+</h1>
+
+<div align="center">
+
+![Plant shed](./demo.gif)
+
+ An app made with the help of React.js.
+    
+</div>
+
 
 
 ---
 
 ## Screenshots
+
+* Plant Product Page:
+
 ![5.png](pic10.jpg)
+
+* Description Page:
 
 ![1.png](pic4.png)
 
+* Favorite Page:
+
 ![2.png](pic3.png)
 
+* Coffee Product Page:
+
 ![4.png](pic7.png)
+
+* Login Page:
 
 ![3.png](pic2.png)
 
+
+* Shopping Cart Page:
+
 ![4.png](pic5.png)
+
+
+* Payment Form Page:
 
 ![3.png](pic6.png)
 
-![4.png](pic7.png)
+
 
 ---
 
